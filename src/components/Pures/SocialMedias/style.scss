@@ -1,0 +1,16 @@
+.social-medias {
+  margin-top: 24px;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      margin-right: 12px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

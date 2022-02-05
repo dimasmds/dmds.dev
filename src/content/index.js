@@ -59,7 +59,18 @@ export const tags = [
   },
 ];
 
-export const socialMedia = {};
+export const socialMedias = [
+  {
+    name: 'Github',
+    url: 'https://github.com/dimasmds',
+    icon: '/assets/images/icons/social-media/github.png',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/dimasmds/',
+    icon: '/assets/images/icons/social-media/linkedin.png',
+  },
+];
 export const techStack = {};
 export const workHistories = {};
 export const credentials = {};

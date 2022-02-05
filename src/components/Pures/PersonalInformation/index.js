@@ -3,6 +3,7 @@ import { personalInformation } from '../../../content';
 
 import './style.scss';
 import Tags from '../Tags';
+import SocialMedias from '../SocialMedias';
 
 function PersonalInformation() {
   const {
@@ -73,6 +74,7 @@ function PersonalInformation() {
       </p>
       <p className="personal-information__description">{description}</p>
       <Tags />
+      <SocialMedias />
     </header>
   );
 }
