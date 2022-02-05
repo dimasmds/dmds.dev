@@ -15,7 +15,19 @@ export const navigation = {
     },
   ],
 };
-export const personalInformation = {};
+
+export const personalInformation = {
+  name: 'Dimas Maulana Dwi Saputra',
+  description: 'Front End Web and Mobile Developer | Love JavaScript, React, and Kotlin | React Certified | Google Certified as Android Associate Developer | Content Writer',
+  mention: 'dimasmds',
+  location: 'Bandung',
+  currentJob: {
+    role: 'Lead Web and Cloud Curriculum',
+    at: 'Dicoding',
+  },
+  pictureUrl: '/assets/images/profile.jpg',
+};
+
 export const socialMedia = {};
 export const tags = {};
 export const techStack = {};
