@@ -2,6 +2,7 @@ import React from 'react';
 import { personalInformation } from '../../../content';
 
 import './style.scss';
+import Tags from '../Tags';
 
 function PersonalInformation() {
   const {
@@ -65,6 +66,7 @@ function PersonalInformation() {
         </span>
       </p>
       <p className="personal-information__description">{description}</p>
+      <Tags />
     </header>
   );
 }

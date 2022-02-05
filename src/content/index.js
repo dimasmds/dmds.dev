@@ -28,8 +28,38 @@ export const personalInformation = {
   pictureUrl: '/assets/images/profile.jpg',
 };
 
+export const tags = [
+  {
+    name: 'Software Engineer',
+    icon: '/assets/images/icons/tags/software-engineer.png',
+  },
+  {
+    name: 'AWS Certified',
+    icon: '/assets/images/icons/tags/aws-certified.png',
+  },
+  {
+    name: 'Web Developer',
+    icon: '/assets/images/icons/tags/web-developer.png',
+  },
+  {
+    name: '5 years experience',
+    icon: '/assets/images/icons/tags/5-years-experience.png',
+  },
+  {
+    name: 'Github Star',
+    icon: '/assets/images/icons/tags/github-star.png',
+  },
+  {
+    name: 'React Developer',
+    icon: '/assets/images/icons/tags/react-developer.png',
+  },
+  {
+    name: 'Node.js',
+    icon: '/assets/images/icons/tags/nodejs.png',
+  },
+];
+
 export const socialMedia = {};
-export const tags = {};
 export const techStack = {};
 export const workHistories = {};
 export const credentials = {};
