@@ -5,6 +5,7 @@ import PersonalInformation from '../../Pures/PersonalInformation';
 import './style.scss';
 import TechStack from '../../Pures/TechStack';
 import WorkHistories from '../../Pures/WorkHistories';
+import Footer from '../../Pures/Footer';
 
 function HomePage() {
   const { title } = navigation;
@@ -17,6 +18,7 @@ function HomePage() {
           <PersonalInformation />
           <TechStack />
           <WorkHistories />
+          <Footer />
         </div>
       </main>
     </>

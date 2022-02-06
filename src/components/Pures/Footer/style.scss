@@ -1,3 +1,26 @@
 .footer {
+  display: flex;
+  margin-top: 32px;
+  align-items: center;
 
+  .footer__copyright {
+    flex: auto;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .footer__design-inspired {
+    flex: 1;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 16px 0;
+    border-radius: 8px;
+
+    a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
+  }
 }
