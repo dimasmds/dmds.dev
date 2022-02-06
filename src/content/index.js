@@ -225,5 +225,27 @@ export const techStack = {
   ],
 };
 
-export const workHistories = {};
+export const workHistories = [
+  {
+    name: 'Lead Web and Cloud Curriculum',
+    company: 'Dicoding',
+    logo: '/assets/images/icons/company/dicoding.png',
+    startDate: '2022-01-01',
+    endDate: null,
+  },
+  {
+    name: 'Web Curriculum Developer',
+    company: 'Dicoding',
+    logo: '/assets/images/icons/company/dicoding.png',
+    startDate: '2019-09-01',
+    endDate: '2022-01-01',
+  },
+  {
+    name: 'Submission Project Reviewer',
+    company: 'Dicoding',
+    logo: '/assets/images/icons/company/dicoding.png',
+    startDate: '2019-02-01',
+    endDate: '2019-08-31',
+  },
+];
 export const credentials = {};

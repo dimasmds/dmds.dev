@@ -1,0 +1,56 @@
+.work-histories {
+  margin-top: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e6e6e6;
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .work-histories__list {
+    margin-top: 16px;
+
+    .work-histories__item {
+      padding: 16px 0;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 56px;
+        height: 56px;
+        margin-right: 16px;
+        border-radius: 4px;
+      }
+
+      .work-histories__item__info {
+        h4 {
+          font-size: 14px;
+          padding: 4px 0;
+        }
+
+        .work-histories__item__info__company-name, .work-histories__item__info__date {
+          font-size: 12px;
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px){
+  .work-histories {
+    .work-histories__list {
+      .work-histories__item {
+        .work-histories__item__info {
+          h4 {
+            font-size: 16px;
+          }
+
+          .work-histories__item__info__company-name, .work-histories__item__info__date {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
