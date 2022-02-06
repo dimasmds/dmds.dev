@@ -1,0 +1,41 @@
+.tech-stack {
+  margin-top: 32px;
+
+  .tech-stack__title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .tech-stack__stack__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 14px;
+
+    .tech-stack__stack {
+      margin-top: 32px;
+
+      h3 {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #878E95;
+      }
+
+
+      .tech-stack__stack__item {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
