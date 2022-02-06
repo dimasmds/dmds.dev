@@ -13,9 +13,9 @@ function TechStack() {
           .map((key) => (
             <div key={key} className="tech-stack__stack">
               <h3>{key}</h3>
-              {techStack[key].map(({ name }) => (
+              {techStack[key].map(({ name, icon }) => (
                 <div key={name} className="tech-stack__stack__item">
-                  <img src="/assets/images/icons/tech-stack/default.png" alt={name} />
+                  <img src={icon} alt={name} />
                   <p>
                     {name}
                   </p>
