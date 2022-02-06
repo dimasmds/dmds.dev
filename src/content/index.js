@@ -3,7 +3,7 @@ export const navigation = {
   menus: [
     {
       name: 'Home',
-      url: '/',
+      url: '/#',
     },
     {
       name: 'Blog',
