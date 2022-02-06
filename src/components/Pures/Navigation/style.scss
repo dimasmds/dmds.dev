@@ -1,6 +1,9 @@
 .header {
   border-bottom: 1px solid #e5e5e5;
   min-height: 55px;
+  position: sticky;
+  background-color: white;
+  top: 0;
 
   .header__container {
     margin: 0 auto;
