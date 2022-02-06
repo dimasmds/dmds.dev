@@ -27,7 +27,7 @@ function PersonalInformation() {
         alt={`${name} profile`}
       />
       <h2 className="personal-information__name">{name}</h2>
-      <p className="personal-information__mini_info">
+      <div className="personal-information__mini_info">
         <div>
           <span>{`@${mention}`}</span>
         </div>
@@ -71,7 +71,7 @@ function PersonalInformation() {
             <strong>{at}</strong>
           </span>
         </div>
-      </p>
+      </div>
       <p className="personal-information__description">{description}</p>
       <Tags />
       <SocialMedias />
