@@ -1,20 +1,20 @@
 .footer {
   display: flex;
+  flex-direction: column;
   margin-top: 32px;
   align-items: center;
 
   .footer__copyright {
-    flex: auto;
     font-size: 0.8rem;
     font-weight: 300;
+    margin-bottom: 16px;
   }
 
   .footer__design-inspired {
-    flex: 1;
     font-size: 0.8rem;
     text-align: center;
     border: 1px solid #ccc;
-    padding: 16px 0;
+    padding: 16px;
     border-radius: 8px;
 
     a {
@@ -22,5 +22,13 @@
       color: black;
       text-decoration: none;
     }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
