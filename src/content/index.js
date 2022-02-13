@@ -3,15 +3,15 @@ export const navigation = {
   menus: [
     {
       name: 'Home',
-      url: '/#',
+      url: '/',
     },
     {
       name: 'Blog',
-      url: '/#blog',
+      url: '/blog',
     },
     {
       name: 'About',
-      url: '/#about',
+      url: '/about',
     },
   ],
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
+import { Link } from 'react-router-dom';
 import { navigation } from '../../../content';
 
 class Navigation extends Component {
@@ -53,7 +54,7 @@ class Navigation extends Component {
               {
                 navigation.menus.map(({ name, url }) => (
                   <li key={name}>
-                    <a href={url}>{name}</a>
+                    <Link to={url}>{name}</Link>
                   </li>
                 ))
               }
