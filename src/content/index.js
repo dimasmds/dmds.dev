@@ -6,8 +6,8 @@ export const navigation = {
       url: '/',
     },
     {
-      name: 'Blog',
-      url: '/blog',
+      name: 'Notebook',
+      url: '/notebook',
     },
     {
       name: 'About',

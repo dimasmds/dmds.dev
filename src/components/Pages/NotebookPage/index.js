@@ -2,11 +2,11 @@ import React from 'react';
 import Navigation from '../../Pures/Navigation';
 import { navigation } from '../../../content';
 
-function BlogPage() {
+function NotebookPage() {
   const { title } = navigation;
   return (
-    <Navigation title={title} activeMenu="Blog" />
+    <Navigation title={title} activeMenu="Notebook" />
   );
 }
 
-export default BlogPage;
+export default NotebookPage;
