@@ -1,0 +1,45 @@
+.page-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 36px 0;
+
+  .about {
+    min-height: 75vh;
+
+    .about__title {
+      margin-bottom: 32px;
+      font-size: 18px;
+    }
+
+    .about__content {
+      font-size: 14px;
+
+      h3, p {
+        margin-bottom: 24px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        line-height: 24px;
+      }
+
+      ul {
+        list-style-position: inside;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .page-container {
+    .about {
+      .about__content {
+        font-size: 15px;
+      }
+    }
+  }
+}
