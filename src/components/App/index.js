@@ -1,12 +1,15 @@
 import React from 'react';
 import './style.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
 
 function App() {
   return (
-    <div className="app">
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
