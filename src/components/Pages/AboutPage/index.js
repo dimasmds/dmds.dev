@@ -22,7 +22,7 @@ function AboutPage() {
       <div className="page-container">
         <main className="about">
           <h2 className="about__title">About me</h2>
-          <div className="about__content">
+          <div className="markdown__content">
             <ReactMarkdown>
               {aboutText}
             </ReactMarkdown>
