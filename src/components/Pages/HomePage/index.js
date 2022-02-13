@@ -12,7 +12,7 @@ function HomePage() {
 
   return (
     <>
-      <Navigation title={title} />
+      <Navigation title={title} activeMenu="Home" />
       <main>
         <div className="main__container">
           <PersonalInformation />

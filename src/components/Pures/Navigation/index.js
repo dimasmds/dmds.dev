@@ -28,7 +28,7 @@ class Navigation extends Component {
   }
 
   render() {
-    const { title } = this.props;
+    const { title, activeMenu } = this.props;
     const { isDrawerOpen } = this.state;
 
     return (
@@ -54,7 +54,7 @@ class Navigation extends Component {
               {
                 navigation.menus.map(({ name, url }) => (
                   <li key={name}>
-                    <Link to={url}>{name}</Link>
+                    <Link to={url} className={activeMenu === name ? 'active' : ''}>{name}</Link>
                   </li>
                 ))
               }
@@ -68,6 +68,7 @@ class Navigation extends Component {
 
 Navigation.propTypes = {
   title: PropTypes.string.isRequired,
+  activeMenu: PropTypes.string.isRequired,
 };
 
 export default Navigation;

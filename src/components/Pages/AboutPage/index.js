@@ -5,7 +5,7 @@ import { navigation } from '../../../content';
 function AboutPage() {
   const { title } = navigation;
   return (
-    <Navigation title={title} />
+    <Navigation title={title} activeMenu="About" />
   );
 }
 
