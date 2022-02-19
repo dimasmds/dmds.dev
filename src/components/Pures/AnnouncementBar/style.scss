@@ -1,0 +1,46 @@
+.announcement-bar {
+  padding: 8px;
+  background-color: #191414;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  .announcement-bar__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #1DB954;
+      }
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.close {
+  display: none;
+}
