@@ -1,6 +1,6 @@
 ### Hi! 👋 I'm Dimas.
 
-An independent Software Engineer who loves to create and share projects about web and mobile technology! I've enjoyed JavaScript and make it the main language in creating a project.
+> An independent Software Engineer who loves to create and share projects about web and mobile technology! I've enjoyed JavaScript and make it the main language in creating a project.
 
 I'm currently active in contributing as Curriculum Developer at [@dicodingacademy](https://dicoding.com/) to build courses in Front-End Apps (Web, Android) and Back-End Service.
 
