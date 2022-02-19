@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import hljs from 'highlight.js';
 import ReactMarkdown from 'react-markdown';
 import Navigation from '../../Pures/Navigation';
 import { navigation } from '../../../content';
@@ -14,6 +15,7 @@ function AboutPage() {
     const response = await fetch('/contents/about/about.md');
     const responseText = await response.text();
     setAboutText(responseText);
+    hljs.highlightAll();
   });
 
   return (
