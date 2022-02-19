@@ -1,28 +1,36 @@
 .announcement-bar {
-  padding: 8px;
+  padding: 8px 16px;
   background-color: #191414;
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 
   .announcement-bar__content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
 
     img {
       width: 18px;
       height: 18px;
       margin-right: 8px;
+      margin-bottom: 8px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 12px;
       text-align: center;
+      margin-bottom: 8px;
 
       a {
         color: white;
+        font-weight: bold;
         text-decoration: none;
       }
 
@@ -43,4 +51,23 @@
 
 .close {
   display: none;
+}
+
+@media screen and (min-width: 600px){
+  .announcement-bar{
+    flex-direction: row;
+
+    .announcement-bar__content {
+      flex-direction: row;
+
+      img {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 0;
+      };
+    }
+  }
 }
