@@ -28,24 +28,26 @@ function AnnouncementBar() {
     );
   }
 
-  const { data: { artist, track, url } } = data;
+  const {
+    data: {
+      artist,
+      track,
+      url,
+    },
+  } = data;
 
   return (
     <div className={`announcement-bar ${isOpen ? '' : 'close'}`}>
       <div className="announcement-bar__content">
-        <img src="/assets/images/icons/social-media/spotify.png" alt="Spotify Logo" />
+        <img src="/assets/images/icons/social-media/spotify.png" alt="Spotify Logo" title="Currently playing" />
         <p>
-          Currently playing
-          {' '}
-          <a href={url} target="_blank" rel="noreferrer">
-            { track }
+          <a href={url} target="_blank" rel="noreferrer" title="Currently playing">
+            {track}
             {' '}
             by
             {' '}
-            { artist }
+            {artist}
           </a>
-          {' '}
-          on Spotify
         </p>
       </div>
       <button type="button" onClick={onButtonCloseClick}>X</button>
