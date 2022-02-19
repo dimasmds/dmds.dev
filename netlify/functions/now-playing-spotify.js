@@ -16,11 +16,8 @@ exports.handler = async () => {
 
   if (response.status === 204) {
     return {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'No song is currently playing',
-        data: null,
-      }),
+      statusCode: 204,
+      body: null,
     };
   }
 
