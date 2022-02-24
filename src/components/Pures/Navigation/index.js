@@ -8,12 +8,15 @@ import AnnouncementBar from '../AnnouncementBar';
 class Navigation extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       isDrawerOpen: false,
+      activeMenu: 'Home',
     };
 
     this.onCloseButtonClick = this.onCloseButtonClick.bind(this);
     this.onDrawerButtonClick = this.onDrawerButtonClick.bind(this);
+    this.onNavigationClick = this.onNavigationClick.bind(this);
   }
 
   onCloseButtonClick() {
@@ -28,12 +31,19 @@ class Navigation extends Component {
     });
   }
 
+  onNavigationClick({ target }) {
+    this.setState((prevState) => ({
+      ...prevState,
+      activeMenu: target.innerText,
+    }));
+  }
+
   render() {
     const {
       title,
-      activeMenu,
     } = this.props;
-    const { isDrawerOpen } = this.state;
+
+    const { isDrawerOpen, activeMenu } = this.state;
 
     return (
       <div className="header">
@@ -62,7 +72,7 @@ class Navigation extends Component {
                     url,
                   }) => (
                     <li key={name}>
-                      <Link to={url} className={activeMenu === name ? 'active' : ''}>{name}</Link>
+                      <Link to={url} onClick={this.onNavigationClick} className={activeMenu === name ? 'active' : ''}>{name}</Link>
                     </li>
                   ))
                 }
@@ -78,7 +88,6 @@ class Navigation extends Component {
 
 Navigation.propTypes = {
   title: PropTypes.string.isRequired,
-  activeMenu: PropTypes.string.isRequired,
 };
 
 export default Navigation;
