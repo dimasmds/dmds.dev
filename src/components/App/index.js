@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/notebook" element={<NotebookPage />} />
+        <Route path="/notebooks" element={<NotebookPage />} />
       </Routes>
     </BrowserRouter>
   );

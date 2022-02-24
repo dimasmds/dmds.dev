@@ -6,8 +6,8 @@ export const navigation = {
       url: '/',
     },
     {
-      name: 'notebook',
-      url: '/notebook',
+      name: 'notebooks',
+      url: '/notebooks',
     },
     {
       name: 'about',
@@ -248,4 +248,22 @@ export const workHistories = [
     endDate: '2019-08-31',
   },
 ];
+
 export const credentials = {};
+
+export const notebooks = [
+  {
+    slug: 'bulan-unordinary-woman-pengantar',
+    title: 'Bulan, Unordinary Woman - Pengantar',
+    tags: ['story', 'bulan'],
+    date: '2022-02-24',
+    content: '/contents/notebooks/22/02/24_01.md',
+  },
+  {
+    slug: 'bulan-unordinary-woman-bab-1',
+    title: 'Bulan, Unordinary Woman - Bab 1',
+    category: ['story', 'bulan'],
+    date: '2022-02-24',
+    content: '/contents/notebooks/22/02/24_01.md',
+  },
+];

@@ -34,8 +34,8 @@ class Navigation extends Component {
   }
 
   onNavigationClick({ target }) {
-    this.setState((prevState) => ({
-      ...prevState,
+    this.setState(() => ({
+      isDrawerOpen: false,
       activeMenu: target.innerText.toLowerCase(),
     }));
   }
