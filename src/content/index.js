@@ -2,15 +2,15 @@ export const navigation = {
   title: 'Dimas Maulana Dwi Saputra',
   menus: [
     {
-      name: 'Home',
+      name: 'home',
       url: '/',
     },
     {
-      name: 'Notebook',
+      name: 'notebook',
       url: '/notebook',
     },
     {
-      name: 'About',
+      name: 'about',
       url: '/about',
     },
   ],

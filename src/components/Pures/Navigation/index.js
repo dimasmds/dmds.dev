@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom';
 import { navigation } from '../../../content';
 import AnnouncementBar from '../AnnouncementBar';
 
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
 class Navigation extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       isDrawerOpen: false,
-      activeMenu: 'Home',
+      activeMenu: window.location.pathname.split('/')[1] || 'home',
     };
 
     this.onCloseButtonClick = this.onCloseButtonClick.bind(this);
@@ -34,7 +36,7 @@ class Navigation extends Component {
   onNavigationClick({ target }) {
     this.setState((prevState) => ({
       ...prevState,
-      activeMenu: target.innerText,
+      activeMenu: target.innerText.toLowerCase(),
     }));
   }
 
@@ -72,7 +74,7 @@ class Navigation extends Component {
                     url,
                   }) => (
                     <li key={name}>
-                      <Link to={url} onClick={this.onNavigationClick} className={activeMenu === name ? 'active' : ''}>{name}</Link>
+                      <Link to={url} onClick={this.onNavigationClick} className={activeMenu === name ? 'active' : ''}>{capitalizeFirstLetter(name)}</Link>
                     </li>
                   ))
                 }
