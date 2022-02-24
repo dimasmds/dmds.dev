@@ -1,18 +1,12 @@
-.page-container {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 36px 0;
+.notebook-page {
+  min-height: 75vh;
 
-  .notebook-page {
-    min-height: 75vh;
+  .notebook-page__title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
 
-    .notebook-page__title {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .notebook-page__subtitle {
-      font-weight: lighter;
-    }
+  .notebook-page__subtitle {
+    font-weight: lighter;
   }
 }

@@ -30,25 +30,23 @@ function NotebookPage() {
   const { title } = notebook;
 
   return (
-    <div className="page-container">
-      <main className="notebook-detail">
-        <header>
-          <h2 className="notebook-detail__title">{title}</h2>
-          <div className="notebook-detail__tags">
-            {notebook.tags.map((tag) => (
-              <span key={tag} className="notebook-detail__tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </header>
-        <div className="markdown-body">
-          <ReactMarkdown>
-            {content}
-          </ReactMarkdown>
+    <main className="notebook-detail">
+      <header>
+        <h2 className="notebook-detail__title">{title}</h2>
+        <div className="notebook-detail__tags">
+          {notebook.tags.map((tag) => (
+            <span key={tag} className="notebook-detail__tag">
+              {tag}
+            </span>
+          ))}
         </div>
-      </main>
-    </div>
+      </header>
+      <div className="markdown-body">
+        <ReactMarkdown>
+          {content}
+        </ReactMarkdown>
+      </div>
+    </main>
   );
 }
 

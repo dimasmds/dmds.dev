@@ -1,14 +1,8 @@
-.page-container {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 36px 0;
+.about {
+  min-height: 75vh;
 
-  .about {
-    min-height: 75vh;
-
-    .about__title {
-      margin-bottom: 32px;
-      font-size: 18px;
-    }
+  .about__title {
+    margin-bottom: 32px;
+    font-size: 18px;
   }
 }

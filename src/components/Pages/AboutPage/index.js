@@ -15,16 +15,14 @@ function AboutPage() {
   });
 
   return (
-    <div className="page-container">
-      <main className="about">
-        <h2 className="about__title">About me</h2>
-        <div className="markdown-body">
-          <ReactMarkdown>
-            {aboutText}
-          </ReactMarkdown>
-        </div>
-      </main>
-    </div>
+    <main className="about">
+      <h2 className="about__title">About me</h2>
+      <div className="markdown-body">
+        <ReactMarkdown>
+          {aboutText}
+        </ReactMarkdown>
+      </div>
+    </main>
   );
 }
 
