@@ -6,6 +6,7 @@ import AboutPage from '../Pages/AboutPage';
 import NotebooksPage from '../Pages/NotebooksPage';
 import Navigation from '../Pures/Navigation';
 import { navigation } from '../../content';
+import NotebookPage from '../Pages/NotebookPage';
 
 function App() {
   const { title } = navigation;
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/notebooks" element={<NotebooksPage />} />
+        <Route path="/notebooks/:slug" element={<NotebookPage />} />
       </Routes>
     </BrowserRouter>
   );

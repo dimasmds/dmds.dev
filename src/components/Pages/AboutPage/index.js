@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import hljs from 'highlight.js';
 import ReactMarkdown from 'react-markdown';
-import Footer from '../../Pures/Footer';
 
 import './style.scss';
 
@@ -25,7 +24,6 @@ function AboutPage() {
           </ReactMarkdown>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
