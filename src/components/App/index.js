@@ -3,7 +3,7 @@ import './style.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
 import AboutPage from '../Pages/AboutPage';
-import NotebookPage from '../Pages/NotebookPage';
+import NotebooksPage from '../Pages/NotebooksPage';
 import Navigation from '../Pures/Navigation';
 import { navigation } from '../../content';
 
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/notebooks" element={<NotebookPage />} />
+        <Route path="/notebooks" element={<NotebooksPage />} />
       </Routes>
     </BrowserRouter>
   );

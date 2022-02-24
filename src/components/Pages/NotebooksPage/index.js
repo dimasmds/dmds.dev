@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import Notebooks from '../../Pures/Notebooks';
 
-function NotebookPage() {
+function NotebooksPage() {
   return (
     <div className="page-container">
       <main className="notebook-page">
@@ -14,4 +14,4 @@ function NotebookPage() {
   );
 }
 
-export default NotebookPage;
+export default NotebooksPage;
