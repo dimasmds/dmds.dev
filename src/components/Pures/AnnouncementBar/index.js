@@ -2,19 +2,25 @@ import React from 'react';
 
 import './style.scss';
 
+const fetchNowPlaying = async (callback) => {
+  const response = await fetch('/.netlify/functions/now-playing-spotify');
+
+  if (response.status === 200) {
+    const data = await response.json();
+    callback(data);
+  }
+};
+
 function AnnouncementBar() {
   const [isOpen, setIsOpen] = React.useState(true);
   const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    (async () => {
-      const response = await fetch('/.netlify/functions/now-playing-spotify');
+  React.useEffect(async () => {
+    await fetchNowPlaying(setData);
 
-      if (response.status === 200) {
-        const json = await response.json();
-        setData(json);
-      }
-    })();
+    setInterval((async () => {
+      await fetchNowPlaying(setData);
+    }), 180000);
   }, []);
 
   const onButtonCloseClick = () => {
