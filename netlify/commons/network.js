@@ -20,7 +20,7 @@ const getAccessTokenSpotify = async (authOptions) => {
   return json.access_token;
 };
 
-const fetchSpotifyAuth = async (url, options = {}) => {
+const fetchWithSpotifyAuth = async (url, options = {}) => {
   const token = await getAccessTokenSpotify({
     clientId: config.spotify.clientId,
     clientSecret: config.spotify.clientSecret,
@@ -40,4 +40,4 @@ const fetchSpotifyAuth = async (url, options = {}) => {
   return fetch(url, opts);
 };
 
-module.exports = { fetchSpotifyAuth };
+module.exports = { fetchWithSpotifyAuth };
