@@ -40,4 +40,4 @@ const fetchSpotifyAuth = async (url, options = {}) => {
   return fetch(url, opts);
 };
 
-module.exports = { fetchWithJwtAuth: fetchSpotifyAuth };
+module.exports = { fetchSpotifyAuth };
