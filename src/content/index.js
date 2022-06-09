@@ -18,7 +18,13 @@ export const navigation = {
 
 export const personalInformation = {
   name: 'Dimas Maulana Dwi Saputra',
-  description: 'Front End Web and Mobile Developer | Love JavaScript, React, and Kotlin | React Certified | Google Certified as Android Associate Developer | Content Writer',
+  description: `
+Hi there! 👋
+
+Welcome to my profile. Nice to meet you! My name is Dimas, I'm an independent Software Engineer with 5+ years of experience. I'm doing my best to make high-quality content for Dicoding Academy. I have contributed to many courses with more than 100K students enrolled. My passion in the engineering world is web development and software testing. Also, I'm a long-live learner in the Software Architecture field.
+
+Apart from the engineering world, I am passionate about music and history. In the slack time, I read a lot of historical facts while listening to music.
+  `,
   mention: 'dimasmds',
   location: 'Bandung',
   currentJob: {
