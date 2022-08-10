@@ -19,11 +19,15 @@
       }
 
       .header__drawer_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-height: 44px;
         min-width: 44px;
-        font-size: 18px;
+        font-size: 24px;
         background-color: transparent;
         border: 0;
+        color: var(--on-background);
         cursor: pointer;
       }
 

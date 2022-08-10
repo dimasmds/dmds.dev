@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 import { Link } from 'react-router-dom';
+import { MdMenu } from 'react-icons/md';
 import { navigation } from '../../../content';
 import AnnouncementBar from '../AnnouncementBar';
 
@@ -56,7 +57,7 @@ class Navigation extends Component {
               className="header__drawer_button"
               onClick={this.onDrawerButtonClick}
             >
-              ☰
+              <MdMenu />
             </button>
             <h1 className="header__title">{title}</h1>
             <nav className={`header__navigation_drawer ${isDrawerOpen ? 'open' : ''}`}>
