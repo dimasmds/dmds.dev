@@ -14,7 +14,7 @@
       .notebook-detail__tag {
         padding: 4px 12px;
         border-radius: 4px;
-        border: 1px solid #e6e6e6;
+        border: 1px solid var(--on-background);
         margin: 0 8px 0 0;
       }
 
@@ -27,5 +27,11 @@
   .markdown-body {
     font-family: 'Inter', sans-serif;
     line-height: 1.75;
+    background-color: var(--background);
+    color: var(--on-background);
+  }
+
+  .markdown-body blockquote {
+    color: var(--on-background-grey);
   }
 }

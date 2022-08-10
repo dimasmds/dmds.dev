@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
     padding: 16px 0;
-    border-bottom: 2px dashed #eaeaea;
+    border-bottom: 2px dashed var(--on-background-grey);
 
     a {
       display: inline-block;
       flex: 1;
       font-size: 14px;
-      color: black;
+      color: var(--on-background);
       text-decoration: none;
     }
 
@@ -21,7 +21,7 @@
 
     span {
       font-size: 14px;
-      color: #999;
+      color: var(--on-background-grey);
     }
   }
 }

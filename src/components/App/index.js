@@ -13,18 +13,20 @@ function App() {
   const { title } = navigation;
 
   return (
-    <BrowserRouter>
-      <Navigation title={title} />
-      <div className="page-container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/notebooks" element={<NotebooksPage />} />
-          <Route path="/notebooks/:slug" element={<NotebookPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="app-container">
+      <BrowserRouter>
+        <Navigation title={title} />
+        <div className="page-container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/notebooks" element={<NotebooksPage />} />
+            <Route path="/notebooks/:slug" element={<NotebookPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 

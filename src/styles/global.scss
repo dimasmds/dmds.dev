@@ -1,3 +1,31 @@
+:root {
+    --primary: #BB86FC;
+    --primary-variant: #3700B3;
+    --secondary: #03DAC6;
+    --background: #121212;
+    --surface: #121212;
+    --error: #CF6679;
+    --warning: #F39C12;
+    --on-background: #FFFFFF;
+    --on-background-grey: #c7c7c7;
+    --on-surface: #FFFFFF;
+  }
+  
+  [data-theme="light"] {
+    --background: #DDDDDD;
+    --suface: #FFFFFF;
+    --on-background: #333333;
+    --on-background-grey: #6d6d6d;
+    --on-surface: #333333;
+  }
+
+  .app-container {
+    color: var(--on-background);
+    background-color: var(--background);
+    min-height: 100vh;
+    transition: all ease-in-out 0.5s;
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -16,15 +44,15 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--background);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--on-background-grey);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--on-background-grey);
 }
