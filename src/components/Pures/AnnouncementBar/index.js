@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaSpotify } from 'react-icons/fa';
 
 import './style.scss';
 
@@ -45,7 +46,7 @@ function AnnouncementBar() {
   return (
     <div className={`announcement-bar ${isOpen ? '' : 'close'}`}>
       <div className="announcement-bar__content">
-        <img src="/assets/images/icons/social-media/spotify.png" alt="Spotify Logo" title="Currently playing" />
+        <FaSpotify title="Now playing on spotify" />
         <p>
           <a href={url} target="_blank" rel="noreferrer" title="Currently playing">
             {track}
