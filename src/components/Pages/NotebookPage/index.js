@@ -15,13 +15,15 @@ function NotebookPage() {
     return <div>404</div>;
   }
 
-  React.useEffect(async () => {
-    const { content: notebookContent } = notebook;
-    const response = await fetch(notebookContent);
-    const text = await response.text();
-    setContent(text);
-    hljs.highlightAll();
-  });
+  React.useEffect(() => {
+    (async () => {
+      const { content: notebookContent } = notebook;
+      const response = await fetch(notebookContent);
+      const text = await response.text();
+      setContent(text);
+      hljs.highlightAll();
+    })();
+  }, []);
 
   if (content === '') {
     return <div />;

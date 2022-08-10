@@ -7,12 +7,14 @@ import './style.scss';
 function AboutPage() {
   const [aboutText, setAboutText] = React.useState('');
 
-  useEffect(async () => {
-    const response = await fetch('/contents/about/about.md');
-    const responseText = await response.text();
-    setAboutText(responseText);
-    hljs.highlightAll();
-  });
+  useEffect(() => {
+    (async () => {
+      const response = await fetch('/contents/about/about.md');
+      const responseText = await response.text();
+      setAboutText(responseText);
+      hljs.highlightAll();
+    })();
+  }, []);
 
   return (
     <main className="about">
