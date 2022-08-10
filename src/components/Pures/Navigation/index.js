@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
-import { MdOutlineDarkMode, MdMenu } from 'react-icons/md';
+import React, { useContext, useState } from 'react';
+import { MdOutlineDarkMode, MdOutlineLightMode, MdMenu } from 'react-icons/md';
 import PropTypes from 'prop-types';
 import './style.scss';
 import { Link } from 'react-router-dom';
 
 import { navigation } from '../../../content';
 import AnnouncementBar from '../AnnouncementBar';
+import ThemeContext from '../../../contexts/ThemeContext';
 
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 function Navigation(props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeMenu, setActiveMenut] = useState(() => window.location.pathname.split('/')[1] || 'home');
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const onCloseButtonClick = () => setIsDrawerOpen(false);
   const onDrawerButtonClick = () => setIsDrawerOpen(true);
@@ -54,7 +57,7 @@ function Navigation(props) {
                 ))
               }
               <li>
-                <button type="button"><MdOutlineDarkMode /></button>
+                <button type="button" onClick={toggleTheme}>{theme === 'light' ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}</button>
               </li>
             </ul>
           </nav>
