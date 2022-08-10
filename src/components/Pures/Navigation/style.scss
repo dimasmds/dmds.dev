@@ -70,6 +70,19 @@
             .active {
               font-weight: bold;
             }
+
+            button {
+              display: block;
+              text-align: left;
+              font-size: 24px;
+              width: 100%;
+              padding: 16px 32px;
+              text-decoration: none;
+              color: var(--on-background);
+              background-color: transparent;
+              border: 0;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -113,12 +126,22 @@
           }
 
           ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             li {
               display: inline;
 
               a {
                 display: inline-block;
+              }
+
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: auto;
               }
             }
           }

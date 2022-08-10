@@ -1,92 +1,68 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { MdOutlineDarkMode, MdMenu } from 'react-icons/md';
 import PropTypes from 'prop-types';
 import './style.scss';
 import { Link } from 'react-router-dom';
-import { MdMenu } from 'react-icons/md';
+
 import { navigation } from '../../../content';
 import AnnouncementBar from '../AnnouncementBar';
 
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
+function Navigation(props) {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [activeMenu, setActiveMenut] = useState(() => window.location.pathname.split('/')[1] || 'home');
 
-    this.state = {
-      isDrawerOpen: false,
-      activeMenu: window.location.pathname.split('/')[1] || 'home',
-    };
+  const onCloseButtonClick = () => setIsDrawerOpen(false);
+  const onDrawerButtonClick = () => setIsDrawerOpen(true);
+  const onNavigationClick = ({ target }) => {
+    setIsDrawerOpen(false);
+    setActiveMenut(target.innerText.toLowerCase());
+  };
 
-    this.onCloseButtonClick = this.onCloseButtonClick.bind(this);
-    this.onDrawerButtonClick = this.onDrawerButtonClick.bind(this);
-    this.onNavigationClick = this.onNavigationClick.bind(this);
-  }
+  const { title } = props;
 
-  onCloseButtonClick() {
-    this.setState({
-      isDrawerOpen: false,
-    });
-  }
-
-  onDrawerButtonClick() {
-    this.setState({
-      isDrawerOpen: true,
-    });
-  }
-
-  onNavigationClick({ target }) {
-    this.setState(() => ({
-      isDrawerOpen: false,
-      activeMenu: target.innerText.toLowerCase(),
-    }));
-  }
-
-  render() {
-    const {
-      title,
-    } = this.props;
-
-    const { isDrawerOpen, activeMenu } = this.state;
-
-    return (
-      <div className="header">
-        <header>
-          <div className="header__container">
+  return (
+    <div className="header">
+      <header>
+        <div className="header__container">
+          <button
+            type="button"
+            className="header__drawer_button"
+            onClick={onDrawerButtonClick}
+          >
+            <MdMenu />
+          </button>
+          <h1 className="header__title">{title}</h1>
+          <nav className={`header__navigation_drawer ${isDrawerOpen ? 'open' : ''}`}>
             <button
               type="button"
-              className="header__drawer_button"
-              onClick={this.onDrawerButtonClick}
+              onClick={onCloseButtonClick}
+              className="header__navigation_drawer_close"
             >
-              <MdMenu />
+              ×
             </button>
-            <h1 className="header__title">{title}</h1>
-            <nav className={`header__navigation_drawer ${isDrawerOpen ? 'open' : ''}`}>
-              <button
-                type="button"
-                onClick={this.onCloseButtonClick}
-                className="header__navigation_drawer_close"
-              >
-                ×
-              </button>
-              <ul>
-                {
-                  navigation.menus.map(({
-                    name,
-                    url,
-                  }) => (
-                    <li key={name}>
-                      <Link to={url} onClick={this.onNavigationClick} className={activeMenu === name ? 'active' : ''}>{capitalizeFirstLetter(name)}</Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </nav>
-          </div>
-        </header>
-        <AnnouncementBar />
-      </div>
-    );
-  }
+            <ul>
+              {
+                navigation.menus.map(({
+                  name,
+                  url,
+                }) => (
+                  <li key={name}>
+                    <Link to={url} onClick={onNavigationClick} className={activeMenu === name ? 'active' : ''}>{capitalizeFirstLetter(name)}</Link>
+                  </li>
+                ))
+              }
+              <li>
+                <button type="button"><MdOutlineDarkMode /></button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <AnnouncementBar />
+    </div>
+  );
 }
 
 Navigation.propTypes = {
