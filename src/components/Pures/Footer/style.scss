@@ -13,13 +13,13 @@
   .footer__design-inspired {
     font-size: 0.8rem;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid var(--on-background-grey);
     padding: 16px;
     border-radius: 8px;
 
     a {
       font-weight: bold;
-      color: black;
+      color: var(--on-background);
       text-decoration: none;
     }
   }

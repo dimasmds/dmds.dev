@@ -7,10 +7,8 @@
     a {
       display: inline-block;
       margin-right: 12px;
-      img {
-        width: 20px;
-        height: 20px;
-      }
+      color: var(--on-background);
+      font-size: 24px;
     }
   }
 }

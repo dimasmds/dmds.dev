@@ -5,10 +5,10 @@ import './style.scss';
 function SocialMedias() {
   return (
     <ul className="social-medias">
-      { socialMedias.map(({ name, icon, url }) => (
+      { socialMedias.map(({ name, icon: Icon, url }) => (
         <li key={name}>
           <a href={url} target="_blank" rel="noreferrer">
-            <img src={icon} alt={name} />
+            <Icon />
           </a>
         </li>
       )) }

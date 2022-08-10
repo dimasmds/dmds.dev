@@ -4,26 +4,24 @@
   border: 1px solid #ccc;
   margin: 16px 8px 4px 0;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 16px;
+  
+  div {
+    display: flex;
+    align-items: center;
 
-  * {
-    display: inline-block;
-  }
-
-  .tag__icon {
-    width: 13px;
-    height: 13px;
-    margin-right: 8px;
+    * {
+      display: inline-block;
+    }
+  
+    svg {
+      margin-right: 8px;
+    }
   }
 }
 
 @media screen and (min-width: 600px){
   .tag {
-    font-size: 14px;
-
-    .tag__icon {
-      width: 16px;
-      height: 16px;
-    }
+    font-size: 18px;
   }
 }

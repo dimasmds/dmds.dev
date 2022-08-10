@@ -13,7 +13,7 @@ function App() {
   const { title } = navigation;
 
   return (
-    <div className="app-container">
+    <div className="app-container" data-theme="dark">
       <BrowserRouter>
         <Navigation title={title} />
         <div className="page-container">

@@ -1,3 +1,15 @@
+import {
+  FaGithub,
+  FaLinkedin,
+  FaCode,
+  FaAws,
+  FaChrome,
+  FaGraduationCap,
+  FaGithubAlt,
+  FaReact,
+  FaNodeJs,
+} from 'react-icons/fa';
+
 export const navigation = {
   title: 'Dimas Maulana Dwi Saputra',
   menus: [
@@ -37,31 +49,31 @@ Apart from the engineering world, I am passionate about music and history. In th
 export const tags = [
   {
     name: 'Software Engineer',
-    icon: '/assets/images/icons/tags/software-engineer.png',
+    icon: FaCode,
   },
   {
     name: 'AWS Certified',
-    icon: '/assets/images/icons/tags/aws-certified.png',
+    icon: FaAws,
   },
   {
     name: 'Web Developer',
-    icon: '/assets/images/icons/tags/web-developer.png',
+    icon: FaChrome,
   },
   {
     name: '5 years experience',
-    icon: '/assets/images/icons/tags/5-years-experience.png',
+    icon: FaGraduationCap,
   },
   {
     name: 'Github Star',
-    icon: '/assets/images/icons/tags/github-star.png',
+    icon: FaGithubAlt,
   },
   {
     name: 'React Developer',
-    icon: '/assets/images/icons/tags/react-developer.png',
+    icon: FaReact,
   },
   {
     name: 'Node.js',
-    icon: '/assets/images/icons/tags/nodejs.png',
+    icon: FaNodeJs,
   },
 ];
 
@@ -69,12 +81,12 @@ export const socialMedias = [
   {
     name: 'Github',
     url: 'https://github.com/dimasmds',
-    icon: '/assets/images/icons/social-media/github.png',
+    icon: FaGithub,
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/dimasmds/',
-    icon: '/assets/images/icons/social-media/linkedin.png',
+    icon: FaLinkedin,
   },
 ];
 
