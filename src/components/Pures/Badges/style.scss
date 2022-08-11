@@ -1,0 +1,23 @@
+.badges {
+  margin-top: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e6e6e6;
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .badges__list {
+    margin-top: 32px;
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    .badge {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

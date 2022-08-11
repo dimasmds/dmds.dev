@@ -285,3 +285,26 @@ export const notebooks = [
     content: '/contents/notebooks/22/02/23_01.md',
   },
 ];
+
+export const badges = [
+  {
+    name: 'Associate Android Developer',
+    image: '/assets/images/badges/associate-android-developer.png',
+    link: 'https://graduation.udacity.com/confirm/55HC7FE9',
+  },
+  {
+    name: 'Cloud Practitioner Essentials',
+    image: '/assets/images/badges/cloud-practitioner-essentials.png',
+    link: 'https://www.credly.com/badges/33dd24c0-142c-40c0-b986-f600a068b07c/public_url',
+  },
+  {
+    name: 'React Developer Nanodegree',
+    image: '/assets/images/badges/react-nanodegree.jpg',
+    link: 'https://graduation.udacity.com/confirm/2C9QTMM',
+  },
+  {
+    name: 'Cloud Developer Nanodegree',
+    image: '/assets/images/badges/cloud-developer-nanodegree.jpg',
+    link: 'https://graduation.udacity.com/confirm/55HC7FE9',
+  },
+];

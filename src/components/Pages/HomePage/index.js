@@ -3,6 +3,7 @@ import PersonalInformation from '../../Pures/PersonalInformation';
 import './style.scss';
 import TechStack from '../../Pures/TechStack';
 import WorkHistories from '../../Pures/WorkHistories';
+import Badges from '../../Pures/Badges';
 
 function HomePage() {
   return (
@@ -10,6 +11,7 @@ function HomePage() {
       <PersonalInformation />
       <TechStack />
       <WorkHistories />
+      <Badges />
     </main>
   );
 }
