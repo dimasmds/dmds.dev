@@ -307,4 +307,9 @@ export const badges = [
     image: '/assets/images/badges/cloud-developer-nanodegree.jpg',
     link: 'https://graduation.udacity.com/confirm/55HC7FE9',
   },
+  {
+    name: 'Node.js Application Development',
+    image: '/assets/images/badges/nodejs-application-development.jpg',
+    link: '/assets/others/nodejs-application-development-certificate.pdf',
+  },
 ];
