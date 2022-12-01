@@ -288,6 +288,11 @@ export const notebooks = [
 
 export const badges = [
   {
+    name: 'OpenJS Node.js Application Developer',
+    image: '/assets/images/badges/openjs-nodejs-application-developer.png',
+    link: 'https://www.credly.com/badges/bdcf10e4-ecc2-496a-bd2c-b74a00034297/public_url',
+  },
+  {
     name: 'Associate Android Developer',
     image: '/assets/images/badges/associate-android-developer.png',
     link: 'https://graduation.udacity.com/confirm/55HC7FE9',
