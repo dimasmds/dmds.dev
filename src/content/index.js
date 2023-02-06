@@ -300,7 +300,7 @@ export const badges = [
   {
     name: 'Associate Android Developer',
     image: '/assets/images/badges/associate-android-developer.png',
-    link: 'https://graduation.udacity.com/confirm/55HC7FE9',
+    link: 'https://www.credential.net/bb599703-294b-4c07-bbf0-f892a6225c85',
   },
   {
     name: 'Cloud Practitioner Essentials',
