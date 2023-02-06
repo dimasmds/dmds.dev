@@ -288,6 +288,11 @@ export const notebooks = [
 
 export const badges = [
   {
+    name: 'OpenJS Node.js Services Developer',
+    image: '/assets/images/badges/openjs-nodejs-services-developer.png',
+    link: 'https://www.credly.com/badges/8168076b-d532-4f3b-b987-b3571e046b1d/public_url',
+  },
+  {
     name: 'OpenJS Node.js Application Developer',
     image: '/assets/images/badges/openjs-nodejs-application-developer.png',
     link: 'https://www.credly.com/badges/bdcf10e4-ecc2-496a-bd2c-b74a00034297/public_url',
