@@ -313,6 +313,11 @@ export const badges = [
     link: 'https://graduation.udacity.com/confirm/55HC7FE9',
   },
   {
+    name: 'Node.js Service Development',
+    image: '/assets/images/badges/nodejs-service-development.jpg',
+    link: '/assets/others/nodejs-service-development-certificate.pdf',
+  },
+  {
     name: 'Node.js Application Development',
     image: '/assets/images/badges/nodejs-application-development.jpg',
     link: '/assets/others/nodejs-application-development-certificate.pdf',
