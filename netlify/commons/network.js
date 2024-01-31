@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const config = require('./config');
+import fetch from 'node-fetch';
+import config from './config';
 
 const getAccessTokenSpotify = async (authOptions) => {
   const {
@@ -40,4 +40,4 @@ const fetchWithSpotifyAuth = async (url, options = {}) => {
   return fetch(url, opts);
 };
 
-module.exports = { fetchWithSpotifyAuth };
+export { fetchWithSpotifyAuth };
