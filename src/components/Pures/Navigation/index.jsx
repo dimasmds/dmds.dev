@@ -12,7 +12,7 @@ const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + strin
 
 function Navigation(props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeMenu, setActiveMenut] = useState(() => window.location.pathname.split('/')[1] || 'home');
+  const [activeMenu, setActiveMenu] = useState(() => window.location.pathname.split('/')[1] || 'home');
 
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -20,7 +20,7 @@ function Navigation(props) {
   const onDrawerButtonClick = () => setIsDrawerOpen(true);
   const onNavigationClick = ({ target }) => {
     setIsDrawerOpen(false);
-    setActiveMenut(target.innerText.toLowerCase());
+    setActiveMenu(target.innerText.toLowerCase());
   };
 
   const { title } = props;
