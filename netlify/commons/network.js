@@ -1,5 +1,3 @@
-import config from './config';
-
 const getAccessTokenSpotify = async (authOptions) => {
   const {
     clientId,
@@ -21,9 +19,9 @@ const getAccessTokenSpotify = async (authOptions) => {
 
 const fetchWithSpotifyAuth = async (url, options = {}) => {
   const token = await getAccessTokenSpotify({
-    clientId: config.spotify.clientId,
-    clientSecret: config.spotify.clientSecret,
-    refreshToken: config.spotify.refreshToken,
+    clientId: process.env.SPOTIFY_CLIENT_ID,
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    refreshToken: process.env.SPOTIFY_REFRESH_TOKEN,
   });
 
   const headers = {
