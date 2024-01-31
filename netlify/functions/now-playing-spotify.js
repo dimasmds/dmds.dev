@@ -1,6 +1,6 @@
-const { fetchWithSpotifyAuth } = require('../commons/network');
+import { fetchWithSpotifyAuth } from '../commons/network';
 
-exports.handler = async () => {
+export const handler = async () => {
   const response = await fetchWithSpotifyAuth('https://api.spotify.com/v1/me/player/currently-playing');
 
   if (!response.status.toString().startsWith('2')) {

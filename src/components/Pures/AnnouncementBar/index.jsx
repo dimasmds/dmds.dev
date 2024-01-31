@@ -3,25 +3,30 @@ import { FaSpotify } from 'react-icons/fa';
 
 import './style.scss';
 
-const fetchNowPlaying = async (callback) => {
+async function fetchNowPlaying() {
   const response = await fetch('/.netlify/functions/now-playing-spotify');
 
   if (response.status === 200) {
-    const data = await response.json();
-    callback(data);
+    return response.json();
   }
-};
+
+  throw new Error('failed to fetch data');
+}
 
 function AnnouncementBar() {
   const [isOpen, setIsOpen] = React.useState(true);
   const [data, setData] = React.useState(null);
 
-  React.useEffect(async () => {
-    await fetchNowPlaying(setData);
+  React.useEffect(() => {
+    fetchNowPlaying().then(setData);
 
-    setInterval((async () => {
-      await fetchNowPlaying(setData);
-    }), 180000);
+    const interval = setInterval(() => {
+      fetchNowPlaying().then(setData);
+    }, 180000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   const onButtonCloseClick = () => {
