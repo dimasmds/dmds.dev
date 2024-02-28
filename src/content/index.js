@@ -271,6 +271,13 @@ export const credentials = {};
 
 export const notebooks = [
   {
+    slug: 'seru-seruan-bareng-ai-pakai-node-js',
+    title: 'Seru-seruan bareng AI pakai Node.js',
+    tags: ['AI', 'Developer', 'Node.js'],
+    date: '2024-02-28',
+    content: '/contents/notebooks/24/02/28_01.md',
+  },
+  {
     slug: 'bulan-unordinary-woman-bab-1',
     title: 'Bulan, Unordinary Woman - Bab 1: Dahaga',
     tags: ['story', 'bulan'],

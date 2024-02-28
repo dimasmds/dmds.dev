@@ -1,6 +1,7 @@
 import React from 'react';
 import hljs from 'highlight.js';
 import { useParams } from 'react-router-dom';
+import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
 import './style.scss';
@@ -44,7 +45,7 @@ function NotebookPage() {
         </div>
       </header>
       <div className="markdown-body">
-        <ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {content}
         </ReactMarkdown>
       </div>
