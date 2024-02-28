@@ -1,11 +1,23 @@
 .notebook-detail {
   min-height: 75vh;
 
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p, li, pre, h4, h5, h6 {
+    font-size: 1.2rem;
+  }
+
   header {
     margin-bottom: 32px;
 
     .notebook-detail__title {
-      font-size: 32px;
+      font-size: 2.7rem;
       margin-bottom: 18px;
     }
 
