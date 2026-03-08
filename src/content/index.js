@@ -278,6 +278,13 @@ export const credentials = {};
 
 export const notebooks = [
   {
+    slug: 'mengenal-clawdbot-asisten-ai-pribadi',
+    title: 'Mengenal ClawDBot: Asisten AI Pribadi',
+    tags: ['AI', 'OpenClaw', 'Zai'],
+    date: '2026-03-08',
+    content: '/contents/notebooks/26/03/08_01.md',
+  },
+  {
     slug: 'seru-seruan-bareng-ai-pakai-node-js',
     title: 'Seru-seruan bareng AI pakai Node.js',
     tags: ['AI', 'Developer', 'Node.js'],
