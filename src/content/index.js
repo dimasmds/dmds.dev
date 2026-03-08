@@ -40,7 +40,7 @@ Apart from the engineering world, I am passionate about music and history. In th
   mention: 'dimasmds',
   location: 'Bandung',
   currentJob: {
-    role: 'Lead Web and Cloud Curriculum',
+    role: 'Engineering Manager',
     at: 'Dicoding',
   },
   pictureUrl: '/assets/images/profile.jpg',
@@ -60,7 +60,7 @@ export const tags = [
     icon: FaChrome,
   },
   {
-    name: '5 years experience',
+    name: '5+ years experience',
     icon: FaGraduationCap,
   },
   {
@@ -245,11 +245,18 @@ export const techStack = {
 
 export const workHistories = [
   {
+    name: 'Engineering Manager',
+    company: 'Dicoding',
+    logo: '/assets/images/icons/company/dicoding.png',
+    startDate: '2025-11-01',
+    endDate: null,
+  },
+  {
     name: 'Lead Web and Cloud Curriculum',
     company: 'Dicoding',
     logo: '/assets/images/icons/company/dicoding.png',
     startDate: '2022-01-01',
-    endDate: null,
+    endDate: '2025-10-31',
   },
   {
     name: 'Web Curriculum Developer',
