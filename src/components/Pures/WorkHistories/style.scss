@@ -31,7 +31,7 @@
 
       &:hover {
         transform: translate(2px, 2px);
-        box-shadow: 2px 2px 0 var(--shadow-color));
+        box-shadow: 2px 2px 0 var(--shadow-color);
       }
 
       &:last-child {
@@ -95,7 +95,7 @@
           background-color: var(--surface);
           border: 2px solid var(--on-background-border);
           display: inline-block;
-          box-shadow: 2px 2px 0 var(--shadow-color));
+          box-shadow: 2px 2px 0 var(--shadow-color);
         }
       }
     }
