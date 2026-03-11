@@ -1,27 +1,48 @@
 .tag {
   display: inline-block;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  margin: 16px 8px 4px 0;
-  border-radius: 12px;
-  font-size: 16px;
-  
+  padding: 10px 18px;
+  border: 2px solid var(--on-background-border);
+  margin: 0;
+  border-radius: var(--border-radius);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--secondary);
+  color: #000000;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  transition: all 0.1s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+
   div {
     display: flex;
     align-items: center;
+    gap: 8px;
 
     * {
       display: inline-block;
     }
-  
+
     svg {
-      margin-right: 8px;
+      width: 18px;
+      height: 18px;
+      color: #000000;
+    }
+
+    .tag__name {
+      margin: 0;
+      font-weight: inherit;
     }
   }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   .tag {
-    font-size: 18px;
+    font-size: 1rem;
   }
 }

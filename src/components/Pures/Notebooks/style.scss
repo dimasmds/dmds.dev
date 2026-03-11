@@ -1,27 +1,42 @@
 .notebooks {
-  margin-top: 16px;
+  margin-top: 24px;
 
   .notebook-item {
     display: flex;
     align-items: center;
-    padding: 16px 0;
-    border-bottom: 2px dashed var(--on-background-grey);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background-color: var(--surface);
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: 3px 3px 0 var(--shadow-color);
+    transition: all 0.1s ease;
+
+    &:hover {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+      border-color: var(--primary);
+    }
 
     a {
       display: inline-block;
       flex: 1;
-      font-size: 14px;
+      font-size: 0.9375rem;
+      font-weight: 600;
       color: var(--on-background);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     span {
-      font-size: 14px;
+      font-size: 0.8125rem;
+      font-weight: 500;
       color: var(--on-background-grey);
+      padding: 4px 10px;
+      background-color: var(--background);
+      border: 2px solid var(--on-background-border);
+      border-radius: var(--border-radius);
+      white-space: nowrap;
+      margin-left: 12px;
     }
   }
 }
@@ -29,9 +44,12 @@
 @media screen and (min-width: 600px) {
   .notebooks {
     .notebook-item {
+      a {
+        font-size: 1.0625rem;
+      }
 
-      a, span {
-        font-size: 16px;
+      span {
+        font-size: 0.875rem;
       }
     }
   }

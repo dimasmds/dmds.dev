@@ -1,31 +1,64 @@
 :root {
-    --primary: #BB86FC;
-    --primary-variant: #3700B3;
-    --secondary: #03DAC6;
-    --background: #121212;
-    --surface: #121212;
-    --error: #CF6679;
-    --warning: #F39C12;
-    --on-background: #FFFFFF;
-    --on-background-grey: #c7c7c7;
-    --on-background-border: #4b4b4b;
-    --on-surface: #FFFFFF;
-  }
-  
-  [data-theme="light"] {
-    --background: #FFFFFF;
-    --suface: #FFFFFF;
-    --on-background: #333333;
-    --on-background-grey: #6d6d6d;
-    --on-background-border: #e5e5e5;
-    --on-surface: #333333;
-  }
+    /* Neobrutalism Colors - Bold & Vibrant */
+    --primary: #4A90FF;
+    --primary-variant: #1A2B5E;
+    --secondary: #00E676;
+    --background: #E8E4DE;
+    --surface: #FFFFFF;
+    --error: #FF6B35;
+    --warning: #FFBE0B;
+    --success: #00E676;
 
-  .app-container {
+    /* Typography */
+    --on-background: #000000;
+    --on-background-grey: #555555;
+    --on-background-border: #000000;
+    --on-surface: #000000;
+
+    /* Neobrutalism Borders & Shadows */
+    --border-width: 2px;
+    --border-style: solid;
+    --border-radius: 5px;
+    --shadow-offset: 4px;
+    --shadow-color: #000000;
+
+    /* Grid Background */
+    --grid-color: rgba(0, 0, 0, 0.06);
+    --grid-size: 70px;
+}
+
+[data-theme="light"] {
+    --background: #E8E4DE;
+    --surface: #FFFFFF;
+    --on-background: #000000;
+    --on-background-grey: #555555;
+    --on-background-border: #000000;
+    --on-surface: #000000;
+    --shadow-color: #000000;
+    --grid-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+    --background: #1A1A2E;
+    --surface: #16213E;
+    --on-background: #EAEAEA;
+    --on-background-grey: #999999;
+    --on-background-border: #EAEAEA;
+    --on-surface: #EAEAEA;
+    --shadow-color: rgba(234, 234, 234, 0.4);
+    --grid-color: rgba(234, 234, 234, 0.04);
+}
+
+.app-container {
     color: var(--on-background);
     background-color: var(--background);
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
     min-height: 100vh;
-  }
+    overflow-x: hidden;
+}
 
 * {
     padding: 0;
@@ -34,26 +67,164 @@
 }
 
 body {
+    overflow-x: hidden;
     overflow-y: scroll;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
 }
 
-/* width */
+/* Neobrutalism Base Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    :root {
+        --shadow-offset: 3px;
+    }
+}
+
+/* Neobrutalism Utility Classes */
+.neobrutalism-box {
+    border: var(--border-width) var(--border-style) var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.neobrutalism-button {
+    border: var(--border-width) var(--border-style) var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+        transform: translate(var(--shadow-offset), var(--shadow-offset));
+        box-shadow: none;
+    }
+}
+
+.neobrutalism-badge {
+    display: inline-block;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Section Title */
+.section-title {
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--on-background);
+    margin-bottom: 32px;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+/* Custom Neobrutalist Scrollbar */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: var(--surface);
+    border-left: 2px solid var(--on-background-border);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--on-background-grey);
+    background: var(--on-background);
+    border: 2px solid var(--on-background-border);
+    border-radius: 0;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--on-background-grey);
+    background: var(--primary);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(calc(-100% - 24px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Selection */
+::selection {
+    background: var(--primary);
+    color: white;
 }
