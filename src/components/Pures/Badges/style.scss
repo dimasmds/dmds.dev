@@ -1,12 +1,7 @@
 .badges {
   margin-top: 48px;
-  padding-bottom: 32px;
-  border-bottom: 3px solid var(--on-background-border);
-  background-color: var(--surface);
-  border: 3px solid var(--on-background-border);
-  box-shadow: 6px 6px 0 var(--shadow-color);
-  padding: 32px;
-  overflow-x: hidden;
+  /* Hapus border-bottom dan container background */
+  margin-bottom: 32px;
 
   h3 {
     font-size: 1.5rem;
@@ -28,14 +23,15 @@
 
     .badge {
       padding: 16px;
-      background-color: var(--background);
+      background-color: var(--surface);
       border: 3px solid var(--on-background-border);
       box-shadow: 4px 4px 0 var(--shadow-color);
       transition: all 0.1s ease;
 
       &:hover {
         transform: translate(2px, 2px);
-        box-shadow: 2px 2px 0 var(--shadow-color);
+        box-shadow: 2px 2px 0 var(--shadow-color));
+        border-color: var(--primary);
       }
 
       img {
@@ -51,8 +47,8 @@
 @media screen and (max-width: 599px) {
   .badges {
     margin-top: 32px;
-    padding-bottom: 32px;
-    padding: 20px 16px;
+    margin-bottom: 32px;
+    /* Hapus padding di mobile untuk hemat space */
 
     h3 {
       font-size: 1.25rem;

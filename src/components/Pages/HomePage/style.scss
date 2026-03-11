@@ -1,32 +1,22 @@
-main {
+.home-brutal {
+  /* Hapus background container dan border nesting */
   padding: 24px;
-  background-color: var(--background);
-  border: 3px solid var(--on-background-border);
-  border-radius: 0;
-  box-shadow: 6px 6px 0 var(--shadow-color);
   overflow-x: hidden;
+  position: relative;
 
-  .main__container {
+  /* Jangan ada border di outer container */
+}
+
+@media screen and (min-width: 1024px) {
+  .home-brutal {
+    padding: 48px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 36px 0;
-
-    > * {
-      margin-bottom: 32px;
-    }
   }
 }
 
 @media screen and (max-width: 767px) {
-  main {
-    padding: 16px 12px;
-
-    .main__container {
-      padding: 24px 0;
-
-      > * {
-        margin-bottom: 24px;
-      }
-    }
+  .home-brutal {
+    padding: 24px 16px;
   }
 }

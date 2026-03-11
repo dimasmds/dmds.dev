@@ -1,12 +1,7 @@
 .work-histories {
   margin-top: 48px;
-  padding-bottom: 32px;
-  border-bottom: 3px solid var(--on-background-border);
-  background-color: var(--surface);
-  border: 3px solid var(--on-background-border);
-  box-shadow: 6px 6px 0 var(--shadow-color);
-  padding: 32px;
-  overflow-x: hidden;
+  /* Hapus border-bottom dan container background */
+  margin-bottom: 32px;
 
   h3 {
     font-size: 1.5rem;
@@ -21,20 +16,22 @@
 
   .work-histories__list {
     margin-top: 24px;
-
+    /* Hapus timeline, dots, dan dekorasi */
+    
     .work-histories__item {
       padding: 20px;
-      background-color: var(--background);
+      background-color: var(--surface);
       border: 3px solid var(--on-background-border);
       box-shadow: 4px 4px 0 var(--shadow-color);
       display: flex;
       align-items: center;
       margin-bottom: 16px;
       transition: all 0.1s ease;
+      /* Hapus offset timeline dan dots */
 
       &:hover {
         transform: translate(2px, 2px);
-        box-shadow: 2px 2px 0 var(--shadow-color);
+        box-shadow: 2px 2px 0 var(--shadow-color));
       }
 
       &:last-child {
@@ -46,9 +43,10 @@
         height: 80px;
         margin-right: 20px;
         border-radius: 0;
-        border: 3px solid var(--on-background-border);
+        border: 3px solid var(--primary);
         box-shadow: 3px 3px 0 var(--shadow-color);
         flex-shrink: 0;
+        /* Hapus rotasi */
       }
 
       .work-histories__item__info {
@@ -56,6 +54,7 @@
         min-width: 0;
         word-break: break-word;
         overflow-wrap: break-word;
+        /* Hapus background, border, shadow, rotasi */
 
         h4 {
           font-size: 1.125rem;
@@ -96,6 +95,7 @@
           background-color: var(--surface);
           border: 2px solid var(--on-background-border);
           display: inline-block;
+          box-shadow: 2px 2px 0 var(--shadow-color));
         }
       }
     }
@@ -123,7 +123,7 @@
 @media screen and (max-width: 599px) {
   .work-histories {
     margin-top: 32px;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
     padding: 20px 16px;
 
     h3 {
@@ -139,12 +139,14 @@
         text-align: center;
         padding: 16px;
         margin-bottom: 12px;
+        /* Hapus offset */
 
         img {
           width: 60px;
           height: 60px;
           margin-right: 0;
           margin-bottom: 12px;
+          border-width: 3px;
         }
 
         .work-histories__item__info {
@@ -174,6 +176,7 @@
             margin-top: 8px;
             font-size: 0.75rem;
             padding: 3px 8px;
+            border-width: 2px;
           }
         }
       }

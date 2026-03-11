@@ -1,12 +1,7 @@
 .tech-stack {
   margin-top: 48px;
-  padding-bottom: 48px;
-  border-bottom: 3px solid var(--on-background-border);
-  background-color: var(--surface);
-  border: 3px solid var(--on-background-border);
-  box-shadow: 6px 6px 0 var(--shadow-color);
-  padding: 32px;
-  overflow-x: hidden;
+  /* Hapus background container dan border-bottom */
+  margin-bottom: 32px;
 
   .tech-stack__title {
     font-size: 1.5rem;
@@ -22,21 +17,24 @@
   .tech-stack__stack__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+    gap: 20px;
 
     .tech-stack__stack {
-      margin-top: 24px;
+      margin-top: 20px;
+      /* Hapus background, border, shadow di container */
 
       h4 {
         font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         color: var(--secondary);
-        padding: 8px 16px;
-        background-color: var(--on-background-border);
+        padding: 8px 12px;
+        background-color: var(--surface);
+        border: 2px solid var(--on-background-border);
         display: inline-block;
+        box-shadow: 2px 2px 0 var(--shadow-color);
       }
 
       .tech-stack__stack__item {
@@ -46,12 +44,13 @@
         padding: 12px;
         background-color: var(--background);
         border: 2px solid var(--on-background-border);
+        box-shadow: 2px 2px 0 var(--shadow-color);
         transition: all 0.1s ease;
         flex-wrap: nowrap;
 
         &:hover {
           transform: translate(2px, 2px);
-          box-shadow: 2px 2px 0 var(--shadow-color);
+          box-shadow: 1px 1px 0 var(--shadow-color));
         }
 
         img {
@@ -99,8 +98,7 @@
 @media screen and (max-width: 599px) {
   .tech-stack {
     margin-top: 32px;
-    padding-bottom: 32px;
-    padding: 20px 16px;
+    margin-bottom: 24px;
 
     .tech-stack__title {
       font-size: 1.25rem;
@@ -109,7 +107,7 @@
 
     .tech-stack__stack__list {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 12px;
 
       .tech-stack__stack {
         margin-top: 16px;
@@ -117,7 +115,7 @@
         h4 {
           font-size: 0.875rem;
           padding: 6px 12px;
-          margin-bottom: 12px;
+          margin-bottom: 8px;
         }
 
         .tech-stack__stack__item {
