@@ -6,6 +6,7 @@
   border: 3px solid var(--on-background-border);
   box-shadow: 6px 6px 0 var(--shadow-color);
   padding: 32px;
+  overflow-x: hidden;
 
   h3 {
     font-size: 1.5rem;
@@ -15,6 +16,7 @@
     color: var(--primary);
     margin-bottom: 24px;
     text-shadow: 2px 2px 0 var(--shadow-color);
+    word-break: break-word;
   }
 
   .badges__list {
@@ -39,6 +41,31 @@
       img {
         width: 100%;
         display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .badges {
+    margin-top: 32px;
+    padding-bottom: 32px;
+    padding: 20px 16px;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+
+    .badges__list {
+      margin-top: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+
+      .badge {
+        padding: 12px;
       }
     }
   }

@@ -46,6 +46,7 @@
     color: var(--on-background);
     background-color: var(--background);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 * {
@@ -55,6 +56,7 @@
 }
 
 body {
+    overflow-x: hidden;
     overflow-y: scroll;
     font-family: 'Inter', sans-serif;
 }
@@ -64,6 +66,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 h1 {
@@ -79,6 +83,32 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    :root {
+        --border-width: 2px;
+        --shadow-offset: 2px;
+    }
 }
 
 /* Neobrutalism Utility Classes */

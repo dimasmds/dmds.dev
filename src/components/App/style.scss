@@ -7,4 +7,12 @@
   border-top: none;
   min-height: calc(100vh - 70px);
   box-shadow: 0 4px 0 var(--shadow-color);
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .page-container {
+    padding: 24px 16px;
+    min-height: calc(100vh - 80px);
+  }
 }

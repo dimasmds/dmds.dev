@@ -4,6 +4,7 @@ main {
   border: 3px solid var(--on-background-border);
   border-radius: 0;
   box-shadow: 6px 6px 0 var(--shadow-color);
+  overflow-x: hidden;
 
   .main__container {
     max-width: 1200px;
@@ -12,6 +13,20 @@ main {
 
     > * {
       margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding: 16px 12px;
+
+    .main__container {
+      padding: 24px 0;
+
+      > * {
+        margin-bottom: 24px;
+      }
     }
   }
 }

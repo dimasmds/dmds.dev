@@ -4,6 +4,7 @@
   box-shadow: 6px 6px 0 var(--shadow-color);
   padding: 32px;
   text-align: center;
+  overflow: hidden;
 
   .personal-information__image-profile {
     width: 180px;
@@ -12,6 +13,7 @@
     margin: 0 0 24px 0;
     border: 4px solid var(--primary);
     box-shadow: 4px 4px 0 var(--shadow-color);
+    max-width: 100%;
   }
 
   .personal-information__name {
@@ -22,6 +24,8 @@
     margin: 0 0 24px 0;
     color: var(--primary);
     text-shadow: 3px 3px 0 var(--shadow-color);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .personal-information__mini_info {
@@ -47,6 +51,7 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         transition: all 0.1s ease;
+        font-size: 0.875rem;
 
         &:hover {
           transform: translate(2px, 2px);
@@ -62,6 +67,8 @@
         strong {
           margin-left: 4px;
           text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
       }
     }
@@ -77,6 +84,8 @@
     border: 3px solid var(--on-background-border);
     box-shadow: 4px 4px 0 var(--shadow-color);
     text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -88,6 +97,48 @@
 
     .personal-information__description {
       font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .personal-information {
+    padding: 20px 16px;
+
+    .personal-information__image-profile {
+      width: 120px;
+      height: 120px;
+      margin: 0 0 16px 0;
+      border-width: 3px;
+    }
+
+    .personal-information__name {
+      font-size: 1.5rem;
+      margin: 0 0 16px 0;
+      letter-spacing: 0.05em;
+    }
+
+    .personal-information__mini_info {
+      margin-bottom: 16px;
+      gap: 8px;
+      flex-direction: column;
+      align-items: stretch;
+
+      div {
+        width: 100%;
+
+        span {
+          padding: 10px 16px;
+          font-size: 0.75rem;
+          justify-content: center;
+        }
+      }
+    }
+
+    .personal-information__description {
+      margin-top: 16px;
+      font-size: 0.875rem;
+      padding: 12px 16px;
     }
   }
 }
