@@ -1,5 +1,10 @@
 .page-container {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 36px 0;
+  padding: 48px 24px;
+  background-color: var(--surface);
+  border: 3px solid var(--on-background-border);
+  border-top: none;
+  min-height: calc(100vh - 70px);
+  box-shadow: 0 4px 0 var(--shadow-color);
 }

@@ -1,65 +1,93 @@
 .personal-information {
+  background-color: var(--surface);
+  border: 3px solid var(--on-background-border);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+  padding: 32px;
+  text-align: center;
 
   .personal-information__image-profile {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 8px 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 0;
+    margin: 0 0 24px 0;
+    border: 4px solid var(--primary);
+    box-shadow: 4px 4px 0 var(--shadow-color);
   }
 
   .personal-information__name {
-    font-size: 20px;
-    margin: 8px 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 24px 0;
+    color: var(--primary);
+    text-shadow: 3px 3px 0 var(--shadow-color);
   }
 
   .personal-information__mini_info {
-    margin-bottom: 12px;
-    display: inline-block;
-    font-size: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 
     div {
       display: inline-block;
-      margin-top: 8px;
+      margin: 0;
 
       span {
-        display: flex;
-        flex-wrap: nowrap;
+        display: inline-flex;
         align-items: center;
-        margin-right: 12px;
+        padding: 12px 20px;
+        background-color: var(--primary);
+        color: white;
+        border: 3px solid var(--on-background-border);
+        box-shadow: 3px 3px 0 var(--shadow-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.1s ease;
+
+        &:hover {
+          transform: translate(2px, 2px);
+          box-shadow: 1px 1px 0 var(--shadow-color);
+        }
 
         svg {
-          margin: 0 4px;
-          width: 13px;
-          height: 13px;
+          margin-right: 8px;
+          width: 18px;
+          height: 18px;
         }
 
         strong {
           margin-left: 4px;
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
         }
       }
     }
   }
 
   .personal-information__description {
-    margin-top: 12px;
-    font-size: 14px;
+    margin-top: 24px;
+    font-size: 1.125rem;
     line-height: 1.75;
+    color: var(--on-surface);
+    padding: 20px;
+    background-color: var(--background);
+    border: 3px solid var(--on-background-border);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 600px) {
   .personal-information {
-
     .personal-information__name {
-      font-size: 30px;
-    }
-
-    .personal-information__mini_info {
-      font-size: 14px;
+      font-size: 3rem;
     }
 
     .personal-information__description {
-      font-size: 18px;
+      font-size: 1.25rem;
     }
   }
 }

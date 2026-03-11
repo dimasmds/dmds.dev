@@ -1,22 +1,44 @@
 .badges {
   margin-top: 48px;
   padding-bottom: 32px;
-  border-bottom: 1px solid var(--on-background-border);
+  border-bottom: 3px solid var(--on-background-border);
+  background-color: var(--surface);
+  border: 3px solid var(--on-background-border);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+  padding: 32px;
 
   h3 {
-    font-size: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 0 var(--shadow-color);
   }
 
   .badges__list {
     margin-top: 32px;
     display: grid;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
     .badge {
+      padding: 16px;
+      background-color: var(--background);
+      border: 3px solid var(--on-background-border);
+      box-shadow: 4px 4px 0 var(--shadow-color);
+      transition: all 0.1s ease;
+
+      &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 var(--shadow-color);
+      }
+
       img {
         width: 100%;
+        display: block;
       }
     }
   }

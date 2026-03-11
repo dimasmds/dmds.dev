@@ -1,3 +1,7 @@
 .tags {
-  margin-top: 8px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }

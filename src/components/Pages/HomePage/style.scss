@@ -1,9 +1,17 @@
 main {
-  padding: 12px;
+  padding: 24px;
+  background-color: var(--background);
+  border: 3px solid var(--on-background-border);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--shadow-color);
 
   .main__container {
-    max-width: 750px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 36px 0;
+
+    > * {
+      margin-bottom: 32px;
+    }
   }
 }

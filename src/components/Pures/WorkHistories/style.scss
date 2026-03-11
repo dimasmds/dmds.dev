@@ -1,41 +1,91 @@
 .work-histories {
   margin-top: 48px;
   padding-bottom: 32px;
-  border-bottom: 1px solid var(--on-background-border);
+  border-bottom: 3px solid var(--on-background-border);
+  background-color: var(--surface);
+  border: 3px solid var(--on-background-border);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+  padding: 32px;
 
   h3 {
-    font-size: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 0 var(--shadow-color);
   }
 
   .work-histories__list {
-    margin-top: 16px;
+    margin-top: 24px;
 
     .work-histories__item {
-      padding: 16px 0;
+      padding: 20px;
+      background-color: var(--background);
+      border: 3px solid var(--on-background-border);
+      box-shadow: 4px 4px 0 var(--shadow-color);
       display: flex;
       align-items: center;
+      margin-bottom: 16px;
+      transition: all 0.1s ease;
+
+      &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 var(--shadow-color);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       img {
-        width: 56px;
-        height: 56px;
-        margin-right: 16px;
-        border-radius: 4px;
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        border-radius: 0;
+        border: 3px solid var(--on-background-border);
+        box-shadow: 3px 3px 0 var(--shadow-color);
       }
 
       .work-histories__item__info {
+        flex: 1;
+
         h4 {
-          font-size: 14px;
-          padding: 4px 0;
+          font-size: 1.125rem;
+          padding: 8px 0;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--on-surface);
         }
 
-        .work-histories__item__info__company-name, .work-histories__item__info__date {
-          font-size: 12px;
-          padding: 4px 0;
+        .work-histories__item__info__company-name {
+          font-size: 1rem;
+          padding: 8px 0;
+          font-weight: 600;
+          color: var(--secondary);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .work-histories__item__info__date {
+          font-size: 0.875rem;
+          padding: 8px 0;
+          font-weight: 500;
+          color: var(--on-background-grey);
         }
 
         .work-histories__item__info__date_range {
-          margin-left: 8px;
-          color: var(--on-background-grey)
+          margin-left: 12px;
+          color: var(--primary);
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          padding: 4px 12px;
+          background-color: var(--surface);
+          border: 2px solid var(--on-background-border);
+          display: inline-block;
         }
       }
     }
@@ -48,11 +98,11 @@
       .work-histories__item {
         .work-histories__item__info {
           h4 {
-            font-size: 16px;
+            font-size: 1.25rem;
           }
 
           .work-histories__item__info__company-name, .work-histories__item__info__date {
-            font-size: 14px;
+            font-size: 1.125rem;
           }
         }
       }

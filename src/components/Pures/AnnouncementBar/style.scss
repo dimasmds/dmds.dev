@@ -1,48 +1,73 @@
 .announcement-bar {
-  padding: 8px 16px;
-  background-color: #191414;
+  padding: 12px 24px;
+  background-color: #1DB954;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-bottom: 3px solid var(--on-background-border);
+  box-shadow: 0 4px 0 var(--shadow-color);
 
   .announcement-bar__content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    gap: 12px;
 
     svg {
-      color: #1DB954;
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
+      color: white;
+      width: 24px;
+      height: 24px;
     }
 
     p {
-      font-size: 12px;
+      font-size: 0.875rem;
+      font-weight: 700;
       text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0;
 
       a {
         color: white;
-        font-weight: bold;
+        font-weight: 700;
         text-decoration: none;
-      }
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.1s ease;
 
-      a:hover {
-        text-decoration: underline;
-        color: #1DB954;
+        &:hover {
+          text-decoration: underline;
+          transform: translate(1px, 1px);
+        }
       }
     }
   }
 
   button {
-    background-color: transparent;
-    border: 0;
-    color: white;
+    background-color: white;
+    color: #1DB954;
+    border: 3px solid var(--on-background-border);
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 0 var(--shadow-color);
+    transition: all 0.1s ease;
+
+    &:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 var(--shadow-color);
+    }
+
+    &:active {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+    }
   }
 }
 
@@ -52,10 +77,18 @@
 
 @media screen and (min-width: 600px){
   .announcement-bar{
+    padding: 14px 32px;
+
     .announcement-bar__content {
       p {
-        font-size: 14px;
+        font-size: 1rem;
       };
+    }
+
+    button {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
     }
   }
 }

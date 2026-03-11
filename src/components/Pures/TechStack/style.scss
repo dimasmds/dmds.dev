@@ -1,42 +1,67 @@
 .tech-stack {
   margin-top: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px var(--on-background-border) solid;
+  border-bottom: 3px solid var(--on-background-border);
+  background-color: var(--surface);
+  border: 3px solid var(--on-background-border);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+  padding: 32px;
 
   .tech-stack__title {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 0 var(--shadow-color);
   }
 
   .tech-stack__stack__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
 
     .tech-stack__stack {
-      margin-top: 32px;
+      margin-top: 24px;
 
       h4 {
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 8px;
-        color: #878E95;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+        color: var(--secondary);
+        padding: 8px 16px;
+        background-color: var(--on-background-border);
+        display: inline-block;
       }
-
 
       .tech-stack__stack__item {
         display: flex;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 12px;
+        padding: 12px;
+        background-color: var(--background);
+        border: 2px solid var(--on-background-border);
+        transition: all 0.1s ease;
+
+        &:hover {
+          transform: translate(2px, 2px);
+          box-shadow: 2px 2px 0 var(--shadow-color);
+        }
 
         img {
-          width: 20px;
-          height: 20px;
-          margin-right: 8px;
+          width: 28px;
+          height: 28px;
+          margin-right: 12px;
         }
 
         p {
-          font-size: 12px;
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--on-surface);
+          margin: 0;
         }
       }
     }
@@ -45,26 +70,19 @@
 
 @media screen and (min-width: 600px) {
   .tech-stack {
-
     .tech-stack__title {
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     .tech-stack__stack__list {
-
       .tech-stack__stack {
-
-        h3 {
-          font-size: 14px;
+        h4 {
+          font-size: 1.125rem;
         }
 
         .tech-stack__stack__item {
-          display: flex;
-          align-items: center;
-          margin-top: 16px;
-
           p {
-            font-size: 14px;
+            font-size: 1.125rem;
           }
         }
       }
