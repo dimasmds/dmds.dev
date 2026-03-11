@@ -13,6 +13,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: auto auto 1fr;
+      align-items: center;
       padding: 10px 16px;
       max-width: 1300px;
 
@@ -151,6 +152,7 @@
       .header__container {
         display: grid;
         grid-template-columns: 1fr auto;
+        align-items: center;
         gap: 20px;
 
         .header__drawer_button {

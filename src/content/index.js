@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 
 export const navigation = {
-  title: 'Dimas Maulana Dwi Saputra',
+  title: '',
   menus: [
     {
       name: 'home',
