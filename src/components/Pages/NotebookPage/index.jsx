@@ -26,8 +26,32 @@ function NotebookPage() {
     })();
   }, []);
 
+  // Show skeleton while loading
   if (content === '') {
-    return <div />;
+    return (
+      <main className="notebook-detail skeleton-loading">
+        <header>
+          <div className="skeleton skeleton__title" />
+          <div className="notebook-detail__tags">
+            <div className="skeleton skeleton__tag" />
+            <div className="skeleton skeleton__tag" />
+            <div className="skeleton skeleton__tag" />
+          </div>
+        </header>
+        <div className="markdown-body skeleton-content">
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--long" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--long" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--medium" />
+          <div className="skeleton skeleton__block" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--long" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--medium" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--short" />
+          <div className="skeleton skeleton__block" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--long" />
+          <div className="skeleton skeleton__paragraph skeleton__paragraph--medium" />
+        </div>
+      </main>
+    );
   }
 
   const { title } = notebook;
