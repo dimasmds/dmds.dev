@@ -1,42 +1,41 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 48px;
-  padding: 32px;
-  /* Hapus background-color dan border yang berlebihan */
-  color: var(--on-surface);
-  /* Hapus box-shadow yang berat */
-  text-align: center;
-  border-bottom: 3px solid var(--on-background-border);
-  
+  margin-top: 80px;
+  border-top: 2px solid var(--on-background-border);
+  background-color: var(--on-background);
+  color: var(--surface);
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    text-align: center;
+    gap: 12px;
+  }
+
   .footer__copyright {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 16px;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    letter-spacing: 0.08em;
   }
 
   .footer__design-inspired {
-    font-size: 0.875rem;
-    text-align: center;
-    /* Hapus border dan background yang berlebihan */
-    padding: 12px 24px;
-    background-color: transparent;
-    border: none;
-    color: var(--on-background);
-    
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+
+    .footer__heart {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
     a {
       font-weight: 700;
       color: var(--primary);
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      word-break: break-word;
-      overflow-wrap: break-word;
-      border-bottom: 3px solid transparent;
+      border-bottom: 2px solid transparent;
       transition: border-color 0.2s ease;
 
       &:hover {
@@ -48,33 +47,27 @@
 
 @media screen and (min-width: 800px) {
   .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 48px;
-
-    .footer__copyright {
-      text-align: left;
-      margin-bottom: 0;
-    }
-
-    .footer__design-inspired {
-      text-align: right;
+    .footer__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 48px;
     }
   }
 }
 
 @media screen and (max-width: 799px) {
   .footer {
-    padding: 24px 20px;
+    .footer__inner {
+      padding: 24px 20px;
+    }
 
     .footer__copyright {
-      font-size: 0.875rem;
-      margin-bottom: 12px;
+      font-size: 0.8125rem;
     }
 
     .footer__design-inspired {
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
     }
   }
 }

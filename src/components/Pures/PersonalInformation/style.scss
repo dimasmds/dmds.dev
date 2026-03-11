@@ -1,41 +1,58 @@
 .personal-information {
-  /* Hapus nesting - jadi flat layout */
   background-color: transparent;
   border: none;
   box-shadow: none;
   padding: 0;
-  text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
+
+  .personal-information__hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 32px;
+  }
 
   .personal-information__image-profile {
-    width: 160px;
-    height: 160px;
-    border-radius: 0;
-    margin: 0 0 24px 0;
-    border: 4px solid var(--primary);
-    box-shadow: 4px 4px 0 var(--shadow-color);
+    width: 180px;
+    height: 180px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--on-background-border);
+    box-shadow: 6px 6px 0 var(--shadow-color);
     display: block;
-    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .personal-information__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .personal-information__greeting {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--on-background-grey);
+    margin-bottom: 8px;
   }
 
   .personal-information__name {
-    font-size: 2rem;
+    font-size: 2.75rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0 0 24px 0;
-    color: var(--primary);
-    text-shadow: 2px 2px 0 var(--shadow-color);
-    word-break: break-word;
-    overflow-wrap: break-word;
+    letter-spacing: 0.06em;
+    margin: 0 0 16px 0;
+    color: var(--on-background);
+    line-height: 1.05;
   }
 
   .personal-information__mini_info {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    gap: 10px;
 
     div {
       display: inline-block;
@@ -44,11 +61,12 @@
       span {
         display: inline-flex;
         align-items: center;
-        padding: 10px 16px;
+        padding: 8px 14px;
         background-color: var(--primary);
         color: white;
         border: 2px solid var(--on-background-border);
-        box-shadow: 2px 2px 0 var(--shadow-color);
+        border-radius: var(--border-radius);
+        box-shadow: 3px 3px 0 var(--shadow-color);
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.03em;
@@ -56,8 +74,8 @@
         font-size: 0.8125rem;
 
         &:hover {
-          transform: translate(1px, 1px);
-          box-shadow: 1px 1px 0 var(--shadow-color);
+          transform: translate(3px, 3px);
+          box-shadow: none;
         }
 
         svg {
@@ -68,63 +86,70 @@
 
         strong {
           margin-left: 4px;
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-          word-break: break-word;
-          overflow-wrap: break-word;
         }
       }
     }
   }
 
   .personal-information__description {
-    margin-top: 24px;
-    font-size: 1rem;
-    line-height: 1.6;
+    margin-top: 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
     color: var(--on-surface);
-    padding: 20px;
+    padding: 24px 28px;
     background-color: var(--surface);
     border: 2px solid var(--on-background-border);
-    box-shadow: 3px 3px 0 var(--shadow-color);
+    border-radius: var(--border-radius);
+    box-shadow: 4px 4px 0 var(--shadow-color);
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
-    /* Hapus corner marker dan border extra */
+    position: relative;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .personal-information {
     .personal-information__name {
-      font-size: 2.5rem;
+      font-size: 3.25rem;
     }
 
     .personal-information__description {
-      font-size: 1.0625rem;
-      padding: 24px 32px;
+      padding: 28px 36px;
     }
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 767px) {
   .personal-information {
-    padding: 0 16px;
-    margin-bottom: 24px;
+    padding: 0;
+    margin-bottom: 32px;
+
+    .personal-information__hero {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
 
     .personal-information__image-profile {
       width: 120px;
       height: 120px;
-      margin: 0 0 16px 0;
-      border-width: 3px;
+      margin: 0 auto;
+      box-shadow: 4px 4px 0 var(--shadow-color);
+    }
+
+    .personal-information__intro {
+      align-items: center;
     }
 
     .personal-information__name {
-      font-size: 1.5rem;
-      margin: 0 0 16px 0;
-      letter-spacing: 0.05em;
+      font-size: 1.75rem;
+      margin: 0 0 12px 0;
+      text-align: center;
     }
 
     .personal-information__mini_info {
-      margin-bottom: 16px;
+      justify-content: center;
       gap: 8px;
       flex-direction: column;
       align-items: stretch;
@@ -136,15 +161,13 @@
           padding: 8px 12px;
           font-size: 0.75rem;
           justify-content: center;
-          border-width: 2px;
-          box-shadow: 2px 2px 0 var(--shadow-color);
+          width: 100%;
         }
       }
     }
 
     .personal-information__description {
-      margin-top: 16px;
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       padding: 16px 20px;
     }
   }

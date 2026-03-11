@@ -1,14 +1,11 @@
 .announcement-bar {
-  padding: 12px 24px;
+  padding: 10px 24px;
   background-color: #1DB954;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Hapus border-bottom dan box-shadow */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-bottom: 2px solid var(--on-background-border);
 
   .announcement-bar__content {
     flex: 1;
@@ -17,11 +14,12 @@
     align-items: center;
     gap: 12px;
     min-width: 0;
+    overflow: hidden;
 
     svg {
       color: white;
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       flex-shrink: 0;
     }
 
@@ -32,19 +30,19 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin: 0;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       a {
         color: white;
         font-weight: 700;
         text-decoration: none;
-        border-bottom: 3px solid transparent;
-        transition: all 0.2s ease;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s ease;
 
         &:hover {
           border-bottom-color: white;
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
       }
     }
@@ -53,26 +51,21 @@
   button {
     background-color: white;
     color: #1DB954;
-    border: 3px solid white;
+    border: 2px solid white;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     flex-shrink: 0;
-    /* Hapus skew transformation */
 
     &:hover {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    &:active {
       transform: translate(3px, 3px);
       box-shadow: none;
     }
@@ -83,34 +76,34 @@
   display: none;
 }
 
-@media screen and (min-width: 600px){
-  .announcement-bar{
-    padding: 14px 32px;
+@media screen and (min-width: 600px) {
+  .announcement-bar {
+    padding: 12px 32px;
 
     .announcement-bar__content {
       p {
-        font-size: 1rem;
-      };
+        font-size: 0.9375rem;
+      }
     }
 
     button {
-      width: 48px;
-      height: 48px;
-      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
     }
   }
 }
 
 @media screen and (max-width: 599px) {
   .announcement-bar {
-    padding: 10px 16px;
+    padding: 8px 12px;
 
     .announcement-bar__content {
       gap: 8px;
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
       }
 
       p {
@@ -120,9 +113,9 @@
     }
 
     button {
-      width: 36px;
-      height: 36px;
-      font-size: 16px;
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
     }
   }
 }

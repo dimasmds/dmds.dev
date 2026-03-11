@@ -4,8 +4,8 @@
   z-index: 1000;
 
   header {
-    border-bottom: 3px solid var(--on-background-border);
-    min-height: 70px;
+    border-bottom: 2px solid var(--on-background-border);
+    min-height: 64px;
     background-color: var(--surface);
     box-shadow: 0 4px 0 var(--shadow-color);
 
@@ -13,39 +13,34 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: auto auto 1fr;
-      padding: 12px;
-      max-width: 1400px;
+      padding: 10px 16px;
+      max-width: 1300px;
 
       .header__title {
         display: none;
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: 1.25rem;
+        font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: var(--primary);
-        text-shadow: 2px 2px 0 var(--shadow-color);
+        color: var(--on-background);
       }
 
       .header__drawer_button {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 50px;
-        min-width: 50px;
-        font-size: 28px;
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 24px;
         background-color: var(--primary);
         color: white;
-        border: 3px solid var(--on-background-border);
+        border: 2px solid var(--on-background-border);
+        border-radius: var(--border-radius);
         cursor: pointer;
         box-shadow: 4px 4px 0 var(--shadow-color);
         transition: all 0.1s ease;
 
         &:hover {
-          transform: translate(2px, 2px);
-          box-shadow: 2px 2px 0 var(--shadow-color);
-        }
-
-        &:active {
           transform: translate(4px, 4px);
           box-shadow: none;
         }
@@ -61,28 +56,24 @@
         opacity: 0;
         min-height: 100vh;
         transition: all 0.3s ease-in-out;
-        border-right: 3px solid var(--on-background-border);
+        border-right: 2px solid var(--on-background-border);
 
         .header__navigation_drawer_close {
-          padding: 12px;
+          padding: 8px;
           cursor: pointer;
           background-color: var(--error);
           color: white;
-          border: 3px solid var(--on-background-border);
-          font-size: 32px;
+          border: 2px solid var(--on-background-border);
+          border-radius: var(--border-radius);
+          font-size: 28px;
           font-weight: 700;
-          min-width: 50px;
-          min-height: 50px;
+          min-width: 44px;
+          min-height: 44px;
           margin: 12px;
           box-shadow: 4px 4px 0 var(--shadow-color);
           transition: all 0.1s ease;
 
           &:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 var(--shadow-color);
-          }
-
-          &:active {
             transform: translate(4px, 4px);
             box-shadow: none;
           }
@@ -103,18 +94,18 @@
               text-transform: uppercase;
               letter-spacing: 0.05em;
               border-bottom: 2px solid var(--on-background-border);
-              transition: all 0.1s ease;
+              transition: all 0.15s ease;
 
               &:hover {
                 background-color: var(--primary);
                 color: white;
-                padding-left: 50px;
+                padding-left: 56px;
               }
 
               &.active {
                 background-color: var(--primary);
                 color: white;
-                border-left: 6px solid var(--shadow-color);
+                border-left: 6px solid var(--on-background-border);
               }
             }
 
@@ -128,7 +119,8 @@
               text-decoration: none;
               color: var(--on-surface);
               background-color: var(--secondary);
-              border: 3px solid var(--on-background-border);
+              border: 2px solid var(--on-background-border);
+              border-radius: var(--border-radius);
               cursor: pointer;
               font-weight: 700;
               text-transform: uppercase;
@@ -137,11 +129,6 @@
               transition: all 0.1s ease;
 
               &:hover {
-                transform: translate(2px, 2px);
-                box-shadow: 2px 2px 0 var(--shadow-color);
-              }
-
-              &:active {
                 transform: translate(4px, 4px);
                 box-shadow: none;
               }
@@ -171,7 +158,8 @@
         }
 
         .header__title {
-          display: block;
+          display: flex;
+          align-items: center;
         }
 
         .header__navigation_drawer {
@@ -200,8 +188,9 @@
 
               a {
                 display: inline-block;
-                padding: 12px 24px;
-                border: 3px solid var(--on-background-border);
+                padding: 10px 20px;
+                border: 2px solid var(--on-background-border);
+                border-radius: var(--border-radius);
                 background-color: var(--surface);
                 color: var(--on-surface);
                 text-transform: uppercase;
@@ -211,15 +200,10 @@
                 transition: all 0.1s ease;
 
                 &:hover {
-                  transform: translate(2px, 2px);
-                  box-shadow: 1px 1px 0 var(--shadow-color);
-                  background-color: var(--primary);
-                  color: white;
-                }
-
-                &:active {
                   transform: translate(3px, 3px);
                   box-shadow: none;
+                  background-color: var(--primary);
+                  color: white;
                 }
 
                 &.active {
@@ -233,22 +217,18 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 50px;
-                height: 50px;
+                width: 44px;
+                height: 44px;
                 padding: 0;
-                min-width: 50px;
+                min-width: 44px;
                 margin: 0;
-                border: 3px solid var(--on-background-border);
+                border: 2px solid var(--on-background-border);
+                border-radius: var(--border-radius);
                 background-color: var(--secondary);
                 box-shadow: 3px 3px 0 var(--shadow-color);
                 transition: all 0.1s ease;
 
                 &:hover {
-                  transform: translate(2px, 2px);
-                  box-shadow: 1px 1px 0 var(--shadow-color);
-                }
-
-                &:active {
                   transform: translate(3px, 3px);
                   box-shadow: none;
                 }

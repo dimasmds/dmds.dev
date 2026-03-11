@@ -4,11 +4,36 @@ import './style.scss';
 import TechStack from '../../Pures/TechStack';
 import WorkHistories from '../../Pures/WorkHistories';
 import Badges from '../../Pures/Badges';
+import Marquee from '../../Pures/Marquee';
+import { tags } from '../../../content';
 
 function HomePage() {
   return (
-    <main>
+    <main className="home-page">
       <PersonalInformation />
+
+      <div className="home-page__marquee-strip">
+        <Marquee speed={25}>
+          {tags.map(({ name, icon: Icon }) => (
+            <span key={name} className="home-page__marquee-item">
+              <Icon />
+              {name}
+            </span>
+          ))}
+        </Marquee>
+      </div>
+
+      <div className="home-page__marquee-strip home-page__marquee-strip--reverse">
+        <Marquee speed={20} reverse>
+          {tags.map(({ name, icon: Icon }) => (
+            <span key={name} className="home-page__marquee-item home-page__marquee-item--alt">
+              <Icon />
+              {name}
+            </span>
+          ))}
+        </Marquee>
+      </div>
+
       <TechStack />
       <WorkHistories />
       <Badges />

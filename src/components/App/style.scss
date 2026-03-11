@@ -1,18 +1,20 @@
 .page-container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 60px 32px;
   background-color: var(--surface);
-  border: 3px solid var(--on-background-border);
+  border: 2px solid var(--on-background-border);
   border-top: none;
   min-height: calc(100vh - 70px);
-  box-shadow: 0 4px 0 var(--shadow-color);
-  overflow-x: hidden;
+  box-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 @media screen and (max-width: 767px) {
   .page-container {
-    padding: 24px 16px;
+    padding: 32px 16px;
     min-height: calc(100vh - 80px);
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
   }
 }

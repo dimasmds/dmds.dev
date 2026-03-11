@@ -1,36 +1,43 @@
 .badges {
-  margin-top: 48px;
-  /* Hapus border-bottom dan container background */
-  margin-bottom: 32px;
+  margin-top: 80px;
+  margin-bottom: 48px;
 
   h3 {
+    display: inline-block;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--primary);
-    margin-bottom: 24px;
-    text-shadow: 2px 2px 0 var(--shadow-color);
-    word-break: break-word;
+    letter-spacing: 0.08em;
+    color: #000000;
+    margin-bottom: 32px;
+    padding: 10px 20px;
+    background-color: var(--warning);
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: 4px 4px 0 var(--shadow-color);
   }
 
   .badges__list {
-    margin-top: 32px;
+    margin-top: 0;
     display: grid;
     gap: 20px;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 
     .badge {
       padding: 16px;
       background-color: var(--surface);
-      border: 3px solid var(--on-background-border);
+      border: 2px solid var(--on-background-border);
+      border-radius: var(--border-radius);
       box-shadow: 4px 4px 0 var(--shadow-color);
       transition: all 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
-        transform: translate(2px, 2px);
-        box-shadow: 2px 2px 0 var(--shadow-color);
+        transform: translate(4px, 4px);
+        box-shadow: none;
         border-color: var(--primary);
       }
 
@@ -44,20 +51,26 @@
   }
 }
 
+@media screen and (min-width: 600px) {
+  .badges {
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+}
+
 @media screen and (max-width: 599px) {
   .badges {
-    margin-top: 32px;
+    margin-top: 48px;
     margin-bottom: 32px;
-    /* Hapus padding di mobile untuk hemat space */
 
     h3 {
       font-size: 1.25rem;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .badges__list {
-      margin-top: 16px;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 12px;
 
       .badge {

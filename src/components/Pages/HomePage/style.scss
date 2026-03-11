@@ -1,22 +1,64 @@
-.home-brutal {
-  /* Hapus background container dan border nesting */
-  padding: 24px;
-  overflow-x: hidden;
+.home-page {
+  overflow: visible;
   position: relative;
-
-  /* Jangan ada border di outer container */
 }
 
-@media screen and (min-width: 1024px) {
-  .home-brutal {
-    padding: 48px 32px;
-    max-width: 1200px;
-    margin: 0 auto;
+.home-page__marquee-strip {
+  /* Full bleed: escape container completely */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  margin: 48px 0;
+  padding: 16px 0;
+  background-color: var(--primary);
+  border-top: 2px solid var(--on-background-border);
+  border-bottom: 2px solid var(--on-background-border);
+  overflow: hidden;
+
+  &--reverse {
+    background-color: var(--secondary);
+    transform: translateX(-50%) rotate(1deg);
+    margin-top: -8px;
+  }
+
+  .home-page__marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 24px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    white-space: nowrap;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--alt {
+      color: #000000;
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .home-brutal {
-    padding: 24px 16px;
+  .home-page__marquee-strip {
+    margin: 32px 0;
+    padding: 12px 0;
+
+    .home-page__marquee-item {
+      font-size: 0.875rem;
+      padding: 6px 16px;
+      gap: 8px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }

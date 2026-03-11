@@ -1,24 +1,24 @@
 .tag {
   display: inline-block;
-  padding: 12px 20px;
-  border: 3px solid var(--on-background-border);
+  padding: 10px 18px;
+  border: 2px solid var(--on-background-border);
   margin: 0;
-  border-radius: 0;
-  font-size: 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9375rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: var(--secondary);
-  color: white;
-  box-shadow: 4px 4px 0 var(--shadow-color);
+  color: #000000;
+  box-shadow: 3px 3px 0 var(--shadow-color);
   transition: all 0.1s ease;
   cursor: default;
 
   &:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--shadow-color);
+    transform: translate(3px, 3px);
+    box-shadow: none;
   }
-  
+
   div {
     display: flex;
     align-items: center;
@@ -27,11 +27,11 @@
     * {
       display: inline-block;
     }
-  
+
     svg {
-      width: 20px;
-      height: 20px;
-      color: white;
+      width: 18px;
+      height: 18px;
+      color: #000000;
     }
 
     .tag__name {
@@ -41,8 +41,8 @@
   }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   .tag {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
