@@ -6,7 +6,7 @@ import NotebooksPage from '../Pages/NotebooksPage';
 import Navigation from '../Pures/Navigation';
 import { navigation } from '../../content';
 import NotebookPage from '../Pages/NotebookPage';
-import Footer from '../Pures/Footer';
+
 import './style.scss';
 import ThemeContext from '../../contexts/ThemeContext';
 
@@ -40,7 +40,7 @@ function App() {
               <Route path="/notebooks" element={<NotebooksPage />} />
               <Route path="/notebooks/:slug" element={<NotebookPage />} />
             </Routes>
-            <Footer />
+
           </div>
         </BrowserRouter>
       </div>

@@ -17,67 +17,113 @@
     box-shadow: 4px 4px 0 var(--shadow-color);
   }
 
-  .tech-stack__stack__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+  /* Sticker board grid */
+  .tech-stack__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 
-    .tech-stack__stack {
-      margin-top: 0;
+  .tech-stack__card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background-color: var(--surface);
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--accent);
+    box-shadow: 3px 3px 0 var(--shadow-color);
+    transition: all 0.15s ease;
+    cursor: default;
+    flex-shrink: 0;
 
-      h4 {
-        font-size: 0.8125rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 12px;
-        color: var(--on-background);
-        padding: 6px 12px;
-        background-color: var(--warning);
-        border: 2px solid var(--on-background-border);
-        border-radius: var(--border-radius);
-        display: inline-block;
-        box-shadow: 3px 3px 0 var(--shadow-color);
+    &:hover {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+      background-color: var(--accent);
+      border-left-color: var(--on-background-border);
+
+      .tech-stack__card-name {
+        color: white;
       }
 
-      .tech-stack__stack__item {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        padding: 14px 16px;
-        background-color: var(--surface);
-        border: 2px solid var(--on-background-border);
-        border-radius: var(--border-radius);
-        box-shadow: 3px 3px 0 var(--shadow-color);
-        transition: all 0.1s ease;
+      .tech-stack__card-category {
+        background-color: rgba(0, 0, 0, 0.25);
+        color: white;
+        border-color: transparent;
+      }
 
-        &:hover {
-          transform: translate(3px, 3px);
-          box-shadow: none;
-          background-color: var(--primary);
-          color: white;
-
-          p {
-            color: white;
-          }
-        }
-
-        img {
-          width: 28px;
-          height: 28px;
-          margin-right: 14px;
-          flex-shrink: 0;
-        }
-
-        p {
-          font-size: 1rem;
-          font-weight: 600;
-          color: var(--on-surface);
-          margin: 0;
-          transition: color 0.1s ease;
-        }
+      .tech-stack__card-icon img {
+        filter: brightness(0) invert(1);
       }
     }
+
+    /* Variasi: setiap card ke-5 agak lebih besar */
+    &:nth-child(5n) {
+      padding: 16px 24px;
+
+      .tech-stack__card-icon img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .tech-stack__card-name {
+        font-size: 1.125rem;
+      }
+    }
+
+    /* Variasi: setiap card ke-7 punya top border instead of left */
+    &:nth-child(7n) {
+      border-left: 2px solid var(--on-background-border);
+      border-top: 5px solid var(--accent);
+
+      &:hover {
+        border-top-color: var(--on-background-border);
+      }
+    }
+  }
+
+  .tech-stack__card-icon {
+    flex-shrink: 0;
+
+    img {
+      width: 28px;
+      height: 28px;
+      display: block;
+      transition: filter 0.15s ease;
+    }
+  }
+
+  .tech-stack__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .tech-stack__card-name {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--on-surface);
+    margin: 0;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  .tech-stack__card-category {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--on-background-grey);
+    background-color: var(--background);
+    border: 1px solid var(--on-background-border);
+    border-radius: 3px;
+    padding: 2px 6px;
+    display: inline-block;
+    align-self: flex-start;
+    transition: all 0.15s ease;
   }
 }
 
@@ -99,31 +145,39 @@
       margin-bottom: 20px;
     }
 
-    .tech-stack__stack__list {
-      grid-template-columns: 1fr;
-      gap: 16px;
+    .tech-stack__grid {
+      gap: 10px;
+    }
 
-      .tech-stack__stack {
-        h4 {
-          font-size: 0.75rem;
-          padding: 5px 10px;
-          margin-bottom: 8px;
+    .tech-stack__card {
+      padding: 10px 14px;
+      gap: 10px;
+
+      &:nth-child(5n) {
+        padding: 10px 14px;
+
+        .tech-stack__card-icon img {
+          width: 28px;
+          height: 28px;
         }
 
-        .tech-stack__stack__item {
-          padding: 12px;
-
-          img {
-            width: 24px;
-            height: 24px;
-            margin-right: 12px;
-          }
-
-          p {
-            font-size: 0.9375rem;
-          }
+        .tech-stack__card-name {
+          font-size: 0.875rem;
         }
       }
+    }
+
+    .tech-stack__card-icon img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .tech-stack__card-name {
+      font-size: 0.8125rem;
+    }
+
+    .tech-stack__card-category {
+      font-size: 0.5625rem;
     }
   }
 }

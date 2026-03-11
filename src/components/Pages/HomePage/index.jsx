@@ -13,7 +13,7 @@ function HomePage() {
       <PersonalInformation />
 
       <div className="home-page__marquee-strip">
-        <Marquee speed={25}>
+        <Marquee speed={50}>
           {tags.map(({ name, icon: Icon }) => (
             <span key={name} className="home-page__marquee-item">
               <Icon />
@@ -24,7 +24,7 @@ function HomePage() {
       </div>
 
       <div className="home-page__marquee-strip home-page__marquee-strip--reverse">
-        <Marquee speed={20} reverse>
+        <Marquee speed={45} reverse>
           {tags.map(({ name, icon: Icon }) => (
             <span key={name} className="home-page__marquee-item home-page__marquee-item--alt">
               <Icon />
