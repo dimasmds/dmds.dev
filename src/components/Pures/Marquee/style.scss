@@ -1,0 +1,18 @@
+.marquee {
+  overflow: hidden;
+  display: flex;
+  gap: 24px;
+  width: 100%;
+
+  &:hover .marquee__track {
+    animation-play-state: paused;
+  }
+
+  .marquee__track {
+    display: flex;
+    gap: 24px;
+    flex-shrink: 0;
+    animation: marquee 30s linear infinite;
+    min-width: max-content;
+  }
+}
