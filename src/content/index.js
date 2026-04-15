@@ -22,6 +22,10 @@ export const navigation = {
       url: '/notebooks',
     },
     {
+      name: 'talks',
+      url: '/talks',
+    },
+    {
       name: 'about',
       url: '/about',
     },
