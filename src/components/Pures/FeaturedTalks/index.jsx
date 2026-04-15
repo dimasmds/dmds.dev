@@ -35,8 +35,8 @@ function FeaturedTalks() {
             />
             <div className="featured-talks__overlay">
               <span className="featured-talks__play-icon">&#9654;</span>
+              <span className="featured-talks__main-title">{main.title}</span>
             </div>
-            <span className="featured-talks__main-title">{main.title}</span>
           </a>
         )}
         <div className="featured-talks__side">
