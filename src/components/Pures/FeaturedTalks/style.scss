@@ -243,12 +243,22 @@
 
 @media screen and (max-width: 599px) {
   .featured-talks {
+    &__side-title {
+      display: none;
+    }
+
     &__main-title {
       font-size: 0.8125rem;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    &__side-item {
+      img {
+        border-radius: 3px;
+      }
     }
   }
 }
