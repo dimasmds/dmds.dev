@@ -22,6 +22,10 @@ export const navigation = {
       url: '/notebooks',
     },
     {
+      name: 'talks',
+      url: '/talks',
+    },
+    {
       name: 'about',
       url: '/about',
     },
@@ -275,6 +279,121 @@ export const workHistories = [
 ];
 
 export const credentials = {};
+
+export const techTalks = [
+  {
+    title: 'AWS X Dicoding LIVE : Storage dan Database di AWS',
+    videoId: 'eaSoKJJ67yE',
+  },
+  {
+    title: 'Web Developer From Zero to Hero',
+    videoId: 'LTIaYXvz__4',
+  },
+  {
+    title: 'AWS X Dicoding LIVE: Automation on AWS',
+    videoId: 'NC8TswA7PiM',
+  },
+  {
+    title: 'Dicoding Developer Coaching #56: Back-End | Pengenalan Bahasa Pemrograman JavaScript',
+    videoId: 'axFB3XOE_y8',
+  },
+  {
+    title: 'Dicoding Dev Coaching #60: Back-End | Mengenal Operator, Control Flow, dan Perulangan di JavaScript',
+    videoId: 'FaWGkWB59vA',
+  },
+  {
+    title: 'Dicoding Developer Coaching #62 : Back-End | Object, Array, Map, dan Sets di JavaScript',
+    videoId: 'YjSPw9aZFZg',
+  },
+  {
+    title: 'Dicoding Developer Coaching #70 : Back-End | Package Manager di JavaScript',
+    videoId: '_GYr7G7NCKE',
+  },
+  {
+    title: 'Dicoding Developer Coaching #76 : Back-End | JavaScript Concurrency',
+    videoId: 'QyXqZqJhInc',
+  },
+  {
+    title: 'Dicoding Developer Coaching #78 : Back-End | Menulis Unit Testing di JavaScript',
+    videoId: 'UdQpwR1ub7E',
+  },
+  {
+    title: 'AWS x Dicoding LIVE : "Agile vs DevOps"',
+    videoId: 'mo391NjVx4U',
+  },
+  {
+    title: 'Developer Coaching #83 : Back-End | Ketahui Node.js API yang Penting untuk Pengembangan Back-End',
+    videoId: 'sDXZqe2rGuM',
+  },
+  {
+    title: 'Dicoding Developer Coaching #86 : Back-End | Membuat HTTP Server dengan Node.js',
+    videoId: 'GaWlgj6QrP8',
+  },
+  {
+    title: 'Dicoding Developer Coaching #91: Back-End | Membuat HTTP Server di berbagai Framework Node.js',
+    videoId: 'Y2EV1vRBE3A',
+  },
+  {
+    title: 'Dicoding Developer Coaching #92 : Back-End | Deploy Aplikasi Node.js di AWS',
+    videoId: '9QzA1rULMQo',
+  },
+  {
+    title: 'AWS x Dicoding LIVE : "Serverless Microservices, Container, dan Orchestration"',
+    videoId: 'PbZyl4IE35M',
+  },
+  {
+    title: 'Dicoding Developer Coaching #99 : Back-End | Automation Testing dengan Postman',
+    videoId: '7ao-9pWDRUs',
+  },
+  {
+    title: 'Dicoding Developer Coaching #100 | Special Episode',
+    videoId: '5HAu7hJ3oYY',
+  },
+  {
+    title: 'Dicoding Developer Coaching #101: Back-End | Hapi Plugin dan Data Validation',
+    videoId: 'zwN3NRPlrsI',
+  },
+  {
+    title: '#DevCoach 175: React | Kenalan dengan React: UI Web Masa Kini!',
+    videoId: '-0kstDNdhA8',
+  },
+  {
+    title: '#DevCoach 178: React | Teknik React Menghidupkan UI dengan State',
+    videoId: 'ltOervtEmHc',
+  },
+  {
+    title: '#DevCoach 193: React | Hooks Mengubah Segalanya!',
+    videoId: 'gtQ_QqC7vfQ',
+  },
+  {
+    title: '#DevCoach 189: React | Kenalan dengan Lifecycle Component',
+    videoId: 'icsirDtMu1o',
+  },
+  {
+    title: 'DevCoach 210: React | JANGAN LANGSUNG RTK! Pahami Dulu Redux Fundamental Di Sini.',
+    videoId: 'Wb5WxpFguVg',
+  },
+  {
+    title: 'DevCoach 212: New Course | Belajar Pemrograman Rust untuk Pemula',
+    videoId: 'KOK0qGasby0',
+  },
+  {
+    title: 'Baparekraf Developer Day 2021',
+    videoId: 'VXFvAthCSqQ',
+  },
+  {
+    title: 'Baparekraf Developer Day 2022',
+    videoId: 'W5soN70ajb0',
+  },
+  {
+    title: 'Baparekraf Developer Day 2023',
+    videoId: 'aLCc9XG-Uqk',
+  },
+  {
+    title: 'Back End Track - BDD 2024',
+    videoId: 'zlfGihNfRSo',
+  },
+];
 
 export const notebooks = [
   {

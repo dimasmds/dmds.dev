@@ -6,6 +6,7 @@ import NotebooksPage from '../Pages/NotebooksPage';
 import Navigation from '../Pures/Navigation';
 import { navigation } from '../../content';
 import NotebookPage from '../Pages/NotebookPage';
+import TalksPage from '../Pages/TalksPage';
 
 import './style.scss';
 import ThemeContext from '../../contexts/ThemeContext';
@@ -39,6 +40,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/notebooks" element={<NotebooksPage />} />
               <Route path="/notebooks/:slug" element={<NotebookPage />} />
+              <Route path="/talks" element={<TalksPage />} />
             </Routes>
 
           </div>
