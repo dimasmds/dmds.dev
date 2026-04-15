@@ -29,11 +29,20 @@ function FeaturedTalks() {
             rel="noopener noreferrer"
           >
             <img
+              className="featured-talks__main-bg"
               src={`https://img.youtube.com/vi/${main.videoId}/hqdefault.jpg`}
-              alt={main.title}
+              alt=""
               loading="lazy"
             />
-            <div className="featured-talks__overlay">
+            <div className="featured-talks__main-thumb-wrapper">
+              <img
+                className="featured-talks__main-thumb"
+                src={`https://img.youtube.com/vi/${main.videoId}/hqdefault.jpg`}
+                alt={main.title}
+                loading="lazy"
+              />
+            </div>
+            <div className="featured-talks__main-overlay">
               <span className="featured-talks__play-icon">&#9654;</span>
               <span className="featured-talks__main-title">{main.title}</span>
             </div>
