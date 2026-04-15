@@ -5,6 +5,7 @@ import TechStack from '../../Pures/TechStack';
 import WorkHistories from '../../Pures/WorkHistories';
 import Badges from '../../Pures/Badges';
 import Marquee from '../../Pures/Marquee';
+import FeaturedTalks from '../../Pures/FeaturedTalks';
 import { tags } from '../../../content';
 
 function HomePage() {
@@ -35,6 +36,7 @@ function HomePage() {
       </div>
 
       <TechStack />
+      <FeaturedTalks />
       <WorkHistories />
       <Badges />
     </main>
