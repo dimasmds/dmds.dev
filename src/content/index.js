@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'dari-kode-ke-manajemen-apa-yang-tak-ku-sangka',
+    title: 'Dari Kode ke Manajemen: Apa yang Tak Ku Sangka',
+    tags: ['Engineering Leadership', 'Manajemen', 'Karir'],
+    date: '2026-04-15',
+    content: '/contents/notebooks/26/04/15_01.md',
+  },
+  {
     slug: 'mengenal-clawdbot-asisten-ai-pribadi',
     title: 'Mengenal ClawDBot: Asisten AI Pribadi',
     tags: ['AI', 'OpenClaw', 'Zai'],
