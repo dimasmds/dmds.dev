@@ -397,13 +397,6 @@ export const techTalks = [
 
 export const notebooks = [
   {
-    slug: 'menumbuhkan-engineer-junior-antara-sabar-dan-memberi-ruang',
-    title: 'Menumbuhkan Engineer Junior: Antara Sabar dan Memberi Ruang',
-    tags: ['Engineering Leadership', 'Mentoring', 'Manajemen'],
-    date: '2026-04-15',
-    content: '/contents/notebooks/26/04/15_02.md',
-  },
-  {
     slug: 'dari-kode-ke-manajemen-apa-yang-tak-ku-sangka',
     title: 'Dari Kode ke Manajemen: Apa yang Tak Ku Sangka',
     tags: ['Engineering Leadership', 'Manajemen', 'Karir'],
