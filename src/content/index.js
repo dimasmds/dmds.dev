@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'lima-detik-yang-lebih-berharga-dari-lima-jam',
+    title: 'Lima Detik yang Lebih Berharga dari Lima Jam',
+    tags: ['Parenting', 'Fatherhood', 'Engineering Manager'],
+    date: '2026-04-16',
+    content: '/contents/notebooks/26/04/16_01.md',
+  },
+  {
     slug: 'mengenal-clawdbot-asisten-ai-pribadi',
     title: 'Mengenal ClawDBot: Asisten AI Pribadi',
     tags: ['AI', 'OpenClaw', 'Zai'],
