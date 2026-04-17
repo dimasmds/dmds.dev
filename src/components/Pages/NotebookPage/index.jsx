@@ -1,18 +1,24 @@
 import React from 'react';
 import hljs from 'highlight.js';
 import { useParams } from 'react-router-dom';
+import rehypeRaw from 'rehype-raw';
+import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
-import TTSNotebookPage from './TTSNotebookPage';
+import PodcastPlayer from '../../Pures/PodcastPlayer';
+import './style.scss';
 
 function NotebookPage() {
   const { slug } = useParams();
   const [content, setContent] = React.useState('');
+  const [hasPodcast, setHasPodcast] = React.useState(false);
 
   const notebook = notebooks.find((item) => item.slug === slug);
 
   if (!notebook) {
     return <div>404</div>;
   }
+
+  const podcastSrc = notebook.content.replace(/\.md$/, '_podcast.mp3');
 
   React.useEffect(() => {
     (async () => {
@@ -21,6 +27,14 @@ function NotebookPage() {
       const text = await response.text();
       setContent(text);
       hljs.highlightAll();
+
+      // Check if podcast audio exists
+      try {
+        const podcastResp = await fetch(podcastSrc, { method: 'HEAD' });
+        setHasPodcast(podcastResp.ok);
+      } catch {
+        setHasPodcast(false);
+      }
     })();
   }, []);
 
@@ -52,12 +66,29 @@ function NotebookPage() {
     );
   }
 
+  const { title, tags } = notebook;
+
   return (
-    <TTSNotebookPage
-      content={content}
-      title={notebook.title}
-      tags={notebook.tags}
-    />
+    <main className="notebook-detail">
+      <header>
+        <h2 className="notebook-detail__title">{title}</h2>
+        <div className="notebook-detail__tags">
+          {tags.map((tag) => (
+            <span key={tag} className="notebook-detail__tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </header>
+
+      {hasPodcast && <PodcastPlayer audioSrc={podcastSrc} />}
+
+      <div className="markdown-body">
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+          {content}
+        </ReactMarkdown>
+      </div>
+    </main>
   );
 }
 
