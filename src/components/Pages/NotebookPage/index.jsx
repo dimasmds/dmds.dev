@@ -32,7 +32,8 @@ function NotebookPage() {
       // Check if podcast audio exists
       try {
         const podcastResp = await fetch(podcastSrc, { method: 'HEAD' });
-        setHasPodcast(podcastResp.ok);
+        const ct = podcastResp.headers.get('content-type') || '';
+        setHasPodcast(podcastResp.ok && ct.includes('audio'));
       } catch {
         setHasPodcast(false);
       }
