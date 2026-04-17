@@ -1,9 +1,26 @@
 .notebooks {
   margin-top: 24px;
 
+  .notebook-group {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--on-background);
+      margin: 0 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--on-background-border);
+    }
+  }
+
   .notebook-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 16px 20px;
     margin-bottom: 12px;
     background-color: var(--surface);
@@ -18,16 +35,38 @@
       border-color: var(--primary);
     }
 
-    a {
-      display: inline-block;
+    &__main {
       flex: 1;
+      min-width: 0;
+    }
+
+    a {
+      display: block;
       font-size: 0.9375rem;
       font-weight: 600;
       color: var(--on-background);
       text-decoration: none;
     }
 
-    span {
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    &__tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--on-background-grey);
+      padding: 2px 8px;
+      background-color: var(--background);
+      border: 1px solid var(--on-background-border);
+      border-radius: var(--border-radius);
+    }
+
+    &__date {
       font-size: 0.8125rem;
       font-weight: 500;
       color: var(--on-background-grey);
@@ -37,18 +76,27 @@
       border-radius: var(--border-radius);
       white-space: nowrap;
       margin-left: 12px;
+      flex-shrink: 0;
     }
   }
 }
 
 @media screen and (min-width: 600px) {
   .notebooks {
+    .notebook-group__label {
+      font-size: 1.25rem;
+    }
+
     .notebook-item {
       a {
         font-size: 1.0625rem;
       }
 
-      span {
+      &__tag {
+        font-size: 0.8125rem;
+      }
+
+      &__date {
         font-size: 0.875rem;
       }
     }
