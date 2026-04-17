@@ -1,10 +1,8 @@
 import React from 'react';
 import hljs from 'highlight.js';
 import { useParams } from 'react-router-dom';
-import rehypeRaw from 'rehype-raw';
-import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
-import './style.scss';
+import TTSNotebookPage from './TTSNotebookPage';
 
 function NotebookPage() {
   const { slug } = useParams();
@@ -54,26 +52,12 @@ function NotebookPage() {
     );
   }
 
-  const { title } = notebook;
-
   return (
-    <main className="notebook-detail">
-      <header>
-        <h2 className="notebook-detail__title">{title}</h2>
-        <div className="notebook-detail__tags">
-          {notebook.tags.map((tag) => (
-            <span key={tag} className="notebook-detail__tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </header>
-      <div className="markdown-body">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-          {content}
-        </ReactMarkdown>
-      </div>
-    </main>
+    <TTSNotebookPage
+      content={content}
+      title={notebook.title}
+      tags={notebook.tags}
+    />
   );
 }
 

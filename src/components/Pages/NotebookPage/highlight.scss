@@ -1,0 +1,13 @@
+.tts-highlight {
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 3px;
+  padding: 1px 0;
+
+  &--active {
+    background-color: var(--primary);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 var(--shadow-color);
+  }
+}
