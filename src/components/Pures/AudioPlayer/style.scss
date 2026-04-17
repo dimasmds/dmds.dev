@@ -1,0 +1,128 @@
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--surface);
+  border-top: 2px solid var(--on-background-border);
+  padding: 12px 24px;
+
+  &__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 0 var(--on-background-border);
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    transition: transform 0.1s, box-shadow 0.1s;
+
+    &:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 var(--on-background-border);
+    }
+
+    &:active {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+  }
+
+  &__progress {
+    flex: 1;
+    min-width: 0;
+    height: 10px;
+    background-color: var(--background);
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+
+    &:hover {
+      .audio-player__progress-thumb {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: calc(var(--border-radius) - 2px);
+    transition: width 0.15s linear;
+  }
+
+  &__progress-thumb {
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary);
+    border: 2px solid var(--on-background-border);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+    box-shadow: 1px 1px 0 var(--on-background-border);
+  }
+
+  &__time {
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: monospace;
+    color: var(--on-background-grey);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .audio-player {
+    padding: 10px 12px;
+
+    &__inner {
+      gap: 8px;
+    }
+
+    &__play-btn {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &__progress {
+      height: 8px;
+    }
+
+    &__progress-thumb {
+      width: 12px;
+      height: 12px;
+    }
+
+    &__time {
+      font-size: 0.6875rem;
+      min-width: 68px;
+    }
+  }
+}
