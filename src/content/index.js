@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'tiga-belas-tahun-di-makkah',
+    title: 'Tiga Belas Tahun di Makkah: Pelajaran dari Seerah yang Mengubah Cara Saya Melihat Perjalanan Spiritual',
+    tags: ['Islami', 'Seerah', 'Spiritual'],
+    date: '2026-04-17',
+    content: '/contents/notebooks/26/04/17_01.md',
+  },
+  {
     slug: 'lima-detik-yang-lebih-berharga-dari-lima-jam',
     title: 'Lima Detik yang Lebih Berharga dari Lima Jam',
     tags: ['Parenting', 'Fatherhood', 'Engineering Manager'],
