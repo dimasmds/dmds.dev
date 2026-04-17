@@ -99,7 +99,7 @@ ${article.slice(0, 8000)}`;
     responseModalities: ['audio'],
     speechConfig: {
       voiceConfig: {
-        prebuiltVoiceConfig: { voiceName: 'Kore' }
+        prebuiltVoiceConfig: { voiceName: 'Charon' }
       }
     },
   };
