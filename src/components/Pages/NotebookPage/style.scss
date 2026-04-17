@@ -5,6 +5,25 @@
     padding-bottom: 72px;
   }
 
+  &__no-audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+    padding: 12px 20px;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    background-color: var(--surface);
+    color: var(--on-background-grey);
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+
   h2 {
     font-size: 2.25rem;
   }
