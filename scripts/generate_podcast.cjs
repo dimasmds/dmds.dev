@@ -66,49 +66,40 @@ async function main() {
   console.log(`Article: ${title}`);
   console.log(`Length: ${article.length} chars`);
 
-  const prompt = `Kamu adalah produser podcast Bahasa Indonesia. Buatlah transcript podcast berdurasi ~3-4 menit dalam format dialog antara 2 pembawa acara (Raka dan Sinta) yang membahas artikel berikut dengan gaya santai, natural, dan engaging.
+  const ai = new GoogleGenAI({ apiKey: API_KEY });
+
+  // Step 1: Generate audiobook narration script
+  console.log('\nStep 1: Generating audiobook narration script...');
+  const prompt = `Kamu adalah penulis narasi audiobook profesional Bahasa Indonesia. Ubah artikel berikut menjadi naskah narasi audiobook yang siap dibacakan oleh 1 narrator.
 
 ATURAN:
-- Bahasa Indonesia yang natural, bukan kaku
-- Raka lebih playful, Sinta lebih analitis
-- Mereka membahas POINT UTAMA artikel, bukan membaca ulang
-- Ada interaksi natural (setuju, menambahkan, bercanda)
-- Jangan terlalu panjang, fokus pada 2-3 insight terkuat
-- Format: "Raka: ..." dan "Sinta: ..." bergantian
-- LANGSUNG mulai dari dialog, tanpa pembukaan basa-basi
+- Bahasa Indonesia yang natural, mengalir, dan enak didengar
+- Sifatnya membacakan ulang konten artikel dengan gaya storytelling, bukan membaca mentah
+- Boleh menambahkan transisi antar bagian agar mengalir natural
+- Jangan tambahkan efek suara atau stage direction — cuma teks yang akan dibacakan
+- Pertahankan substansi dan depth artikel aslinya
+- Langsung mulai dari narasi, tanpa "Selamat datang" atau pembukaan basa-basi
+- Akhiri dengan penutup singkat yang natural
 
 ARTIKEL:
 ${article.slice(0, 8000)}`;
 
-  const ai = new GoogleGenAI({ apiKey: API_KEY });
-
-  // Step 1: Generate transcript
-  console.log('\nStep 1: Generating podcast transcript...');
   const transcriptResp = await ai.models.generateContent({
     model: 'gemini-2.0-flash',
     contents: prompt,
   });
   const transcript = transcriptResp.text;
-  console.log(`Transcript generated (${transcript.length} chars)`);
+  console.log(`Narration script generated (${transcript.length} chars)`);
   console.log(`Preview: ${transcript.slice(0, 300)}\n`);
 
-  // Step 2: Generate multi-speaker audio
-  console.log('Step 2: Generating multi-speaker audio (this takes ~3-5 minutes)...');
+  // Step 2: Generate single-speaker audio (male adult voice)
+  console.log('Step 2: Generating audiobook audio (this takes ~2-4 minutes)...');
   const config = {
     temperature: 1,
     responseModalities: ['audio'],
     speechConfig: {
-      multiSpeakerVoiceConfig: {
-        speakerVoiceConfigs: [
-          {
-            speaker: 'Raka',
-            voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Kore' } }
-          },
-          {
-            speaker: 'Sinta',
-            voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Puck' } }
-          },
-        ]
+      voiceConfig: {
+        prebuiltVoiceConfig: { voiceName: 'Kore' }
       }
     },
   };
@@ -116,7 +107,7 @@ ${article.slice(0, 8000)}`;
   const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash-preview-tts',
     config,
-    contents: [{ role: 'user', parts: [{ text: `TTS the following conversation:\n${transcript}` }] }],
+    contents: [{ role: 'user', parts: [{ text: `Read the following text aloud in a calm, clear, adult male voice. Speak naturally as an audiobook narrator in Bahasa Indonesia:\n\n${transcript}` }] }],
   });
 
   const audioChunks = [];

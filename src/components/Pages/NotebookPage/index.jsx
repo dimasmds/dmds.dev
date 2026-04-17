@@ -69,7 +69,7 @@ function NotebookPage() {
   const { title, tags } = notebook;
 
   return (
-    <main className="notebook-detail">
+    <main className={`notebook-detail${hasPodcast ? ' notebook-detail--with-player' : ''}`}>
       <header>
         <h2 className="notebook-detail__title">{title}</h2>
         <div className="notebook-detail__tags">
@@ -81,13 +81,13 @@ function NotebookPage() {
         </div>
       </header>
 
-      {hasPodcast && <PodcastPlayer audioSrc={podcastSrc} />}
-
       <div className="markdown-body">
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {content}
         </ReactMarkdown>
       </div>
+
+      {hasPodcast && <PodcastPlayer audioSrc={podcastSrc} />}
     </main>
   );
 }

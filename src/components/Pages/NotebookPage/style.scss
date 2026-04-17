@@ -1,6 +1,10 @@
 .notebook-detail {
   min-height: 75vh;
 
+  &--with-player {
+    padding-bottom: 72px;
+  }
+
   h2 {
     font-size: 2.25rem;
   }
