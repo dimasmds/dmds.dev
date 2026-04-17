@@ -1,4 +1,4 @@
-.podcast-player {
+.audio-player {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -55,7 +55,7 @@
     overflow: visible;
 
     &:hover {
-      .podcast-player__progress-thumb {
+      .audio-player__progress-thumb {
         transform: translate(-50%, -50%) scale(1.2);
       }
     }
@@ -94,7 +94,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .podcast-player {
+  .audio-player {
     padding: 10px 12px;
 
     &__inner {

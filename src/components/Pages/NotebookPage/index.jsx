@@ -4,14 +4,14 @@ import { useParams } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
-import PodcastPlayer from '../../Pures/PodcastPlayer';
+import AudioPlayer from '../../Pures/AudioPlayer';
 import './style.scss';
 
 function NotebookPage() {
   const { slug } = useParams();
   const [content, setContent] = React.useState('');
-  const [hasPodcast, setHasPodcast] = React.useState(false);
-  const [podcastChecked, setPodcastChecked] = React.useState(false);
+  const [hasAudio, setHasAudio] = React.useState(false);
+  const [audioChecked, setAudioChecked] = React.useState(false);
 
   const notebook = notebooks.find((item) => item.slug === slug);
 
@@ -19,7 +19,7 @@ function NotebookPage() {
     return <div>404</div>;
   }
 
-  const podcastSrc = notebook.content.replace(/\.md$/, '_podcast.mp3');
+  const audioSrc = notebook.content.replace(/\.md$/, '_audio.mp3');
 
   React.useEffect(() => {
     (async () => {
@@ -29,15 +29,15 @@ function NotebookPage() {
       setContent(text);
       hljs.highlightAll();
 
-      // Check if podcast audio exists
+      // Check if audio overview exists
       try {
-        const podcastResp = await fetch(podcastSrc, { method: 'HEAD' });
-        const ct = podcastResp.headers.get('content-type') || '';
-        setHasPodcast(podcastResp.ok && ct.includes('audio'));
+        const audioResp = await fetch(audioSrc, { method: 'HEAD' });
+        const ct = audioResp.headers.get('content-type') || '';
+        setHasAudio(audioResp.ok && ct.includes('audio'));
       } catch {
-        setHasPodcast(false);
+        setHasAudio(false);
       }
-      setPodcastChecked(true);
+      setAudioChecked(true);
     })();
   }, []);
 
@@ -72,7 +72,7 @@ function NotebookPage() {
   const { title, tags } = notebook;
 
   return (
-    <main className={`notebook-detail${hasPodcast ? ' notebook-detail--with-player' : ''}`}>
+    <main className={`notebook-detail${hasAudio ? ' notebook-detail--with-player' : ''}`}>
       <header>
         <h2 className="notebook-detail__title">{title}</h2>
         <div className="notebook-detail__tags">
@@ -90,8 +90,8 @@ function NotebookPage() {
         </ReactMarkdown>
       </div>
 
-      {hasPodcast && <PodcastPlayer audioSrc={podcastSrc} />}
-      {podcastChecked && !hasPodcast && (
+      {hasAudio && <AudioPlayer audioSrc={audioSrc} />}
+      {audioChecked && !hasAudio && (
         <div className="notebook-detail__no-audio">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />

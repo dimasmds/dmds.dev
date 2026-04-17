@@ -9,7 +9,7 @@ function formatTime(sec) {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-function PodcastPlayer({ audioSrc }) {
+function AudioPlayer({ audioSrc }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -58,15 +58,15 @@ function PodcastPlayer({ audioSrc }) {
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="podcast-player">
-      <div className="podcast-player__inner">
+    <div className="audio-player">
+      <div className="audio-player__inner">
         <audio ref={audioRef} preload="metadata">
           <source src={audioSrc} type="audio/mpeg" />
         </audio>
 
         <button
           type="button"
-          className="podcast-player__play-btn"
+          className="audio-player__play-btn"
           onClick={togglePlay}
           title={isPlaying ? 'Jeda' : 'Putar'}
         >
@@ -83,22 +83,22 @@ function PodcastPlayer({ audioSrc }) {
 
         <div
           ref={progressRef}
-          className="podcast-player__progress"
+          className="audio-player__progress"
           onClick={seek}
           role="progressbar"
           tabIndex={0}
         >
           <div
-            className="podcast-player__progress-fill"
+            className="audio-player__progress-fill"
             style={{ width: `${progress}%` }}
           />
           <div
-            className="podcast-player__progress-thumb"
+            className="audio-player__progress-thumb"
             style={{ left: `${progress}%` }}
           />
         </div>
 
-        <span className="podcast-player__time">
+        <span className="audio-player__time">
           {formatTime(currentTime)} / {formatTime(duration)}
         </span>
       </div>
@@ -106,8 +106,8 @@ function PodcastPlayer({ audioSrc }) {
   );
 }
 
-PodcastPlayer.propTypes = {
+AudioPlayer.propTypes = {
   audioSrc: PropTypes.string.isRequired,
 };
 
-export default PodcastPlayer;
+export default AudioPlayer;
