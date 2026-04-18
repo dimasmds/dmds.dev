@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
 import AudioPlayer from '../../Pures/AudioPlayer';
 import SEO from '../../Pures/SEO';
+import { readingTime } from '../../../utils/readingTime';
 import './style.scss';
 
 function NotebookPage() {
@@ -85,6 +86,7 @@ function NotebookPage() {
   }
 
   const { title, tags } = notebook;
+  const estimatedReadingTime = readingTime(content);
 
   return (
     <main className={`notebook-detail${hasAudio ? ' notebook-detail--with-player' : ''}`}>
@@ -104,6 +106,13 @@ function NotebookPage() {
               {tag}
             </span>
           ))}
+        </div>
+        <div className="notebook-detail__reading-time">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>{estimatedReadingTime}</span>
         </div>
       </header>
 
