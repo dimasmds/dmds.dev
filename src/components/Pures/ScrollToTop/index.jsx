@@ -3,6 +3,7 @@ import './style.scss';
 
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const [hasAudioPlayer, setHasAudioPlayer] = useState(false);
   const [rafId, setRafId] = useState(null);
 
   const handleScroll = useCallback(() => {
@@ -24,13 +25,33 @@ function ScrollToTop() {
     };
   }, [handleScroll, rafId]);
 
+  // Detect if audio player is present in the DOM
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setHasAudioPlayer(!!document.querySelector('.audio-player'));
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Initial check
+    setHasAudioPlayer(!!document.querySelector('.audio-player'));
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const classes = [
+    'scroll-to-top',
+    visible && 'scroll-to-top--visible',
+    hasAudioPlayer && 'scroll-to-top--with-audio',
+  ].filter(Boolean).join(' ');
+
   return (
     <button
-      className={`scroll-to-top ${visible ? 'scroll-to-top--visible' : ''}`}
+      className={classes}
       onClick={scrollToTop}
       aria-label="Kembali ke atas"
       type="button"
