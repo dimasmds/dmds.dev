@@ -66,6 +66,21 @@
         content: '#';
       }
     }
+
+    .notebook-detail__reading-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--on-background-grey);
+      letter-spacing: 0.02em;
+
+      svg {
+        opacity: 0.6;
+      }
+    }
   }
 
   .markdown-body {
