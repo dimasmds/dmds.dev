@@ -7,6 +7,7 @@ import Navigation from '../Pures/Navigation';
 import { navigation } from '../../content';
 import NotebookPage from '../Pages/NotebookPage';
 import TalksPage from '../Pages/TalksPage';
+import NotFoundPage from '../Pages/NotFoundPage';
 
 import './style.scss';
 import ThemeContext from '../../contexts/ThemeContext';
@@ -41,6 +42,7 @@ function App() {
               <Route path="/notebooks" element={<NotebooksPage />} />
               <Route path="/notebooks/:slug" element={<NotebookPage />} />
               <Route path="/talks" element={<TalksPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
 
           </div>
