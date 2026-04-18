@@ -17,7 +17,7 @@
   opacity: 0;
   transform: translateY(16px);
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.1s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.1s ease, bottom 0.3s ease;
   outline: none;
 
   &:hover {
@@ -43,6 +43,11 @@
       transform: translate(var(--shadow-offset), var(--shadow-offset));
     }
   }
+
+  // Push up when audio player is visible
+  &--with-audio {
+    bottom: 5.5rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -55,6 +60,10 @@
     svg {
       width: 16px;
       height: 16px;
+    }
+
+    &--with-audio {
+      bottom: 4.75rem;
     }
   }
 }
