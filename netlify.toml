@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build:prerender"
+  publish = "dist"
+
+# SPA fallback: serve prerendered static files first (automatic),
+# then fall back to index.html for any unmatched routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
