@@ -5,6 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
 import AudioPlayer from '../../Pures/AudioPlayer';
+import SEO from '../../Pures/SEO';
 import './style.scss';
 
 function NotebookPage() {
@@ -20,6 +21,20 @@ function NotebookPage() {
   }
 
   const audioSrc = notebook.content.replace(/\.md$/, '_audio.mp3');
+  const canonicalUrl = `https://dmds.dev/notebooks/${slug}`;
+
+  // Extract description from content (first 160 chars without markdown)
+  const plainText = content
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/^#{1,6}\s+.*/gm, '')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+    .replace(/[*_`~]/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+  const metaDescription = plainText.length > 160
+    ? `${plainText.substring(0, 157)}...`
+    : plainText || notebook.title;
 
   React.useEffect(() => {
     (async () => {
@@ -73,6 +88,14 @@ function NotebookPage() {
 
   return (
     <main className={`notebook-detail${hasAudio ? ' notebook-detail--with-player' : ''}`}>
+      <SEO
+        title={title}
+        description={metaDescription}
+        url={canonicalUrl}
+        type="article"
+        publishedTime={notebook.date}
+        tags={tags}
+      />
       <header>
         <h2 className="notebook-detail__title">{title}</h2>
         <div className="notebook-detail__tags">
