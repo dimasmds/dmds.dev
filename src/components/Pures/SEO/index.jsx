@@ -3,8 +3,58 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 const SITE_NAME = 'Dimas Maulana Dwi Saputra';
+const SITE_URL = 'https://dmds.dev';
 const DEFAULT_IMAGE = 'https://dmds.dev/assets/images/profile.jpg';
 const DEFAULT_LOCALE = 'id_ID';
+
+function buildJsonLd({ title, description, url, type, publishedTime, tags }) {
+  if (type === 'article') {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: description,
+      datePublished: publishedTime || undefined,
+      author: {
+        '@type': 'Person',
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/assets/images/profile.jpg`,
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+    };
+
+    if (tags && tags.length > 0) {
+      schema.keywords = tags.join(', ');
+    }
+
+    return schema;
+  }
+
+  // Default: WebSite schema
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: url || SITE_URL,
+    description: description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
 
 function SEO({
   title,
@@ -49,6 +99,8 @@ function SEO({
     }
   }
 
+  const jsonLd = buildJsonLd({ title, description, url, type, publishedTime, tags });
+
   return (
     <Helmet>
       <title>{documentTitle}</title>
@@ -56,6 +108,7 @@ function SEO({
       {metaTags.map((tag, index) => (
         <meta key={`${tag.name || tag.property}-${index}`} {...tag} />
       ))}
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
   );
 }
