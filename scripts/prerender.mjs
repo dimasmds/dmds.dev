@@ -119,6 +119,62 @@ const notebooks = [
 // ---------------------------------------------------------------------------
 
 /**
+ * Build JSON-LD structured data matching the SEO React component.
+ */
+function buildJsonLd(page, url) {
+  const SITE_NAME = 'Dimas Maulana Dwi Saputra';
+  const image = `${SITE_URL}/assets/images/profile.jpg`;
+
+  if (page.type === 'article') {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: page.title,
+      description: page.description,
+      datePublished: page.publishedTime || undefined,
+      image: image,
+      author: {
+        '@type': 'Person',
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME,
+        logo: {
+          '@type': 'ImageObject',
+          url: image,
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+    };
+
+    if (page.tags && page.tags.length > 0) {
+      schema.keywords = page.tags.join(', ');
+    }
+
+    return JSON.stringify(schema);
+  }
+
+  // Default: WebSite schema
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: url || SITE_URL,
+    description: page.description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  });
+}
+
+/**
  * Try to read the first ~160 characters of a notebook's markdown content
  * to use as the meta description. Falls back to a generic description.
  */
@@ -175,6 +231,7 @@ function buildAllPages() {
 function buildHeadExtras(page) {
   const url = `${SITE_URL}${page.route}`;
   const lines = [];
+  const image = `${SITE_URL}/assets/images/profile.jpg`;
 
   // Title – replace the existing <title> later, but also add og:title
   lines.push(`    <meta property="og:title" content="${escapeAttr(page.title)}" />`);
@@ -182,13 +239,16 @@ function buildHeadExtras(page) {
   lines.push(`    <meta property="og:description" content="${escapeAttr(page.description)}" />`);
   lines.push(`    <meta property="og:url" content="${url}" />`);
   lines.push(`    <meta property="og:type" content="${page.type || 'website'}" />`);
+  lines.push(`    <meta property="og:image" content="${image}" />`);
   lines.push(`    <meta property="og:site_name" content="Dimas Maulana Dwi Saputra" />`);
+  lines.push(`    <meta property="og:locale" content="id_ID" />`);
   lines.push(`    <link rel="canonical" href="${url}" />`);
 
   // Twitter card
   lines.push(`    <meta name="twitter:card" content="summary_large_image" />`);
   lines.push(`    <meta name="twitter:title" content="${escapeAttr(page.title)}" />`);
   lines.push(`    <meta name="twitter:description" content="${escapeAttr(page.description)}" />`);
+  lines.push(`    <meta name="twitter:image" content="${image}" />`);
 
   // Article-specific tags
   if (page.publishedTime) {
@@ -199,6 +259,9 @@ function buildHeadExtras(page) {
       lines.push(`    <meta property="article:tag" content="${escapeAttr(tag)}" />`);
     }
   }
+
+  // JSON-LD structured data
+  lines.push(`    <script type="application/ld+json">${buildJsonLd(page, url)}</script>`);
 
   return lines.join('\n');
 }
