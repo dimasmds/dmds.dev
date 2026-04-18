@@ -70,6 +70,15 @@ function NotebookPage() {
     : plainText || notebook.title;
 
   React.useEffect(() => {
+    // Reset state when slug changes
+    setContent('');
+    setHeadings([]);
+    setHasAudio(false);
+    setAudioChecked(false);
+
+    // Scroll to top when navigating between articles
+    window.scrollTo(0, 0);
+
     (async () => {
       const { content: notebookContent } = notebook;
       const response = await fetch(notebookContent);
@@ -88,7 +97,7 @@ function NotebookPage() {
       }
       setAudioChecked(true);
     })();
-  }, []);
+  }, [slug]);
 
   // Inject IDs into rendered headings after content renders
   React.useEffect(() => {
