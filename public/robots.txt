@@ -2,3 +2,6 @@ User-agent: *
 Disallow:
 
 Sitemap: https://dmds.dev/sitemap.xml
+
+# RSS Feed
+# https://dmds.dev/rss.xml
