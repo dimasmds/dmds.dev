@@ -13,7 +13,7 @@ function HomePage() {
   return (
     <main className="home-page">
       <SEO
-        title="Dimas Maulana Dwi Saputra | Software Engineer"
+        title="Software Engineer"
         description="Engineering Manager with 5+ years of experience in web development. AWS Certified, React Developer, Node.js enthusiast based in Bandung."
         url="https://dmds.dev/"
       />

@@ -38,7 +38,7 @@ const SITE_URL = 'https://dmds.dev';
 const staticPages = [
   {
     route: '/',
-    title: 'Dimas Maulana Dwi Saputra | Software Engineer',
+    title: 'Software Engineer | Dimas Maulana Dwi Saputra',
     description:
       'Engineering Manager with 5+ years of experience in web development. AWS Certified, React Developer, Node.js enthusiast based in Bandung.',
     type: 'website',

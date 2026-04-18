@@ -22,8 +22,8 @@ function SEO({
   const metaTags = [
     { name: 'description', content: description },
 
-    // Open Graph
-    { property: 'og:title', content: title || SITE_NAME },
+    // Open Graph — use full documentTitle to match prerendered HTML
+    { property: 'og:title', content: documentTitle },
     { property: 'og:description', content: description },
     { property: 'og:url', content: url },
     { property: 'og:type', content: type },
@@ -33,7 +33,7 @@ function SEO({
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: title || SITE_NAME },
+    { name: 'twitter:title', content: documentTitle },
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image },
   ];
