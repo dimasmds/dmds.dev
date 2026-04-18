@@ -11,6 +11,7 @@ import NotFoundPage from '../Pages/NotFoundPage';
 
 import './style.scss';
 import ThemeContext from '../../contexts/ThemeContext';
+import ScrollToTop from '../Pures/ScrollToTop';
 
 function App() {
   const [theme, setTheme] = React.useState(() => localStorage.getItem('theme') || 'light');
@@ -46,6 +47,7 @@ function App() {
             </Routes>
 
           </div>
+          <ScrollToTop />
         </BrowserRouter>
       </div>
     </ThemeContext.Provider>
