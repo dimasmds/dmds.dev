@@ -1,6 +1,6 @@
 import React from 'react';
-import hljs from 'highlight.js';
 import { useParams } from 'react-router-dom';
+import { loadHighlightJs } from '../../../utils/highlight';
 import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
@@ -76,7 +76,7 @@ function NotebookPage() {
       const text = await response.text();
       setContent(text);
       setHeadings(extractHeadings(text));
-      hljs.highlightAll();
+      await loadHighlightJs(text);
 
       // Check if audio overview exists
       try {

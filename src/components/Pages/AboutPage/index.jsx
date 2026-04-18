@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import hljs from 'highlight.js';
+import { loadHighlightJs } from '../../../utils/highlight';
 import ReactMarkdown from 'react-markdown';
 import SEO from '../../Pures/SEO';
 
@@ -13,7 +13,7 @@ function AboutPage() {
       const response = await fetch('/contents/about/about.md');
       const responseText = await response.text();
       setAboutText(responseText);
-      hljs.highlightAll();
+      await loadHighlightJs(responseText);
     })();
   }, []);
 
