@@ -1,0 +1,109 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  text-align: center;
+
+  .not-found__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 64px;
+    background-color: var(--surface);
+    border: var(--border-width) var(--border-style) var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .not-found__code {
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--on-background);
+    background-color: var(--primary);
+    padding: 12px 40px;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .not-found__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--on-background);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+
+  .not-found__description {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--on-background-grey);
+    line-height: 1.6;
+    max-width: 420px;
+  }
+
+  .not-found__back-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: var(--primary);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: 2px solid var(--on-background-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+      transform: translate(var(--shadow-offset), var(--shadow-offset));
+      box-shadow: none;
+    }
+
+    &:visited {
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .not-found {
+    min-height: 60vh;
+
+    .not-found__card {
+      padding: 32px 24px;
+      gap: 20px;
+    }
+
+    .not-found__code {
+      font-size: 5rem;
+      padding: 10px 28px;
+    }
+
+    .not-found__subtitle {
+      font-size: 1.25rem;
+    }
+
+    .not-found__description {
+      font-size: 0.9rem;
+    }
+
+    .not-found__back-link {
+      padding: 10px 22px;
+      font-size: 0.875rem;
+    }
+  }
+}

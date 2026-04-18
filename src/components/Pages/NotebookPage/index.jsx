@@ -7,15 +7,45 @@ import { notebooks } from '../../../content';
 import AudioPlayer from '../../Pures/AudioPlayer';
 import SEO from '../../Pures/SEO';
 import RelatedArticles from '../../Pures/RelatedArticles';
+import TableOfContents, { slugify } from '../../Pures/TableOfContents';
 import { getRelatedArticles } from '../../../utils/relatedArticles';
 import { readingTime } from '../../../utils/readingTime';
 import './style.scss';
 
+function extractHeadings(markdown) {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings = [];
+  const usedIds = new Set();
+  let match;
+
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2].replace(/[*_`~]/g, '').trim();
+    let id = slugify(text);
+
+    // Ensure unique IDs
+    if (usedIds.has(id)) {
+      let counter = 1;
+      while (usedIds.has(`${id}-${counter}`)) {
+        counter += 1;
+      }
+      id = `${id}-${counter}`;
+    }
+    usedIds.add(id);
+
+    headings.push({ id, text, level });
+  }
+
+  return headings;
+}
+
 function NotebookPage() {
   const { slug } = useParams();
   const [content, setContent] = React.useState('');
+  const [headings, setHeadings] = React.useState([]);
   const [hasAudio, setHasAudio] = React.useState(false);
   const [audioChecked, setAudioChecked] = React.useState(false);
+  const markdownRef = React.useRef(null);
 
   const notebook = notebooks.find((item) => item.slug === slug);
 
@@ -45,6 +75,7 @@ function NotebookPage() {
       const response = await fetch(notebookContent);
       const text = await response.text();
       setContent(text);
+      setHeadings(extractHeadings(text));
       await loadHighlightJs(text);
 
       // Check if audio overview exists
@@ -58,6 +89,30 @@ function NotebookPage() {
       setAudioChecked(true);
     })();
   }, []);
+
+  // Inject IDs into rendered headings after content renders
+  React.useEffect(() => {
+    if (!content || !markdownRef.current) return;
+
+    const container = markdownRef.current;
+    const headingEls = container.querySelectorAll('h2, h3');
+    const usedIds = new Set();
+
+    headingEls.forEach((el) => {
+      const text = el.textContent.replace(/[*_`~]/g, '').trim();
+      let id = slugify(text);
+
+      if (usedIds.has(id)) {
+        let counter = 1;
+        while (usedIds.has(`${id}-${counter}`)) {
+          counter += 1;
+        }
+        id = `${id}-${counter}`;
+      }
+      usedIds.add(id);
+      el.id = id;
+    });
+  }, [content]);
 
   // Show skeleton while loading
   if (content === '') {
@@ -119,7 +174,9 @@ function NotebookPage() {
         </div>
       </header>
 
-      <div className="markdown-body">
+      {headings.length >= 3 && <TableOfContents headings={headings} />}
+
+      <div className="markdown-body" ref={markdownRef}>
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {content}
         </ReactMarkdown>
