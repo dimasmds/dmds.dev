@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
 import AudioPlayer from '../../Pures/AudioPlayer';
 import SEO from '../../Pures/SEO';
+import RelatedArticles from '../../Pures/RelatedArticles';
+import { getRelatedArticles } from '../../../utils/relatedArticles';
 import { readingTime } from '../../../utils/readingTime';
 import './style.scss';
 
@@ -86,6 +88,7 @@ function NotebookPage() {
   }
 
   const { title, tags } = notebook;
+  const relatedArticles = getRelatedArticles(notebook, notebooks);
   const estimatedReadingTime = readingTime(content);
 
   return (
@@ -121,6 +124,10 @@ function NotebookPage() {
           {content}
         </ReactMarkdown>
       </div>
+
+      {relatedArticles.length > 0 && (
+        <RelatedArticles articles={relatedArticles} />
+      )}
 
       {hasAudio && <AudioPlayer audioSrc={audioSrc} />}
       {audioChecked && !hasAudio && (
