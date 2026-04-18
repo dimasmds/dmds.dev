@@ -25,6 +25,7 @@ function NotebookPage() {
 
   // Extract description from content (first 160 chars without markdown)
   const plainText = content
+    .replace(/!\[.*?\]\(.*?\)/g, '')
     .replace(/^#{1,6}\s+.*/gm, '')
     .replace(/\*\*(.*?)\*\*/g, '$1')
     .replace(/\[(.*?)\]\(.*?\)/g, '$1')
