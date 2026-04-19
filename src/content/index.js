@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'dua-anak-dua-dunia-mengapa-adil-tidak-selalu-berarti-sama',
+    title: 'Dua Anak, Dua Dunia: Mengapa "Adil" Tidak Selalu Berarti "Sama"',
+    tags: ['Parenting', 'Fatherhood', 'Family'],
+    date: '2026-04-19',
+    content: '/contents/notebooks/26/04/19_01.md',
+  },
+  {
     slug: 'tiga-belas-tahun-di-makkah',
     title: 'Tiga Belas Tahun di Makkah: Pelajaran dari Seerah yang Mengubah Cara Saya Melihat Perjalanan Spiritual',
     tags: ['Islami', 'Seerah', 'Spiritual'],
