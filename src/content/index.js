@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'server-components-dan-paradigma-baru-arsitektur-frontend',
+    title: 'Server Components dan Paradigma Baru Arsitektur Frontend',
+    tags: ['React', 'Frontend', 'Software Architecture'],
+    date: '2026-04-20',
+    content: '/contents/notebooks/26/04/20_01.md',
+  },
+  {
     slug: 'dua-anak-dua-dunia-mengapa-adil-tidak-selalu-berarti-sama',
     title: 'Dua Anak, Dua Dunia: Mengapa "Adil" Tidak Selalu Berarti "Sama"',
     tags: ['Parenting', 'Fatherhood', 'Family'],
