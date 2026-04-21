@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'webassembly-bahasa-apapun-jalan-di-browser',
+    title: 'WebAssembly: Bahasa Apapun, Jalan di Browser',
+    tags: ['WebAssembly', 'Frontend', 'Web Development'],
+    date: '2026-04-21',
+    content: '/contents/notebooks/26/04/21_01.md',
+  },
+  {
     slug: 'server-components-dan-paradigma-baru-arsitektur-frontend',
     title: 'Server Components dan Paradigma Baru Arsitektur Frontend',
     tags: ['React', 'Frontend', 'Software Architecture'],
