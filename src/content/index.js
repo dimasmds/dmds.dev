@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'mengukur-produktivitas-tim-engineering-tanpa-menyakiti',
+    title: 'Mengukur Produktivitas Tim Engineering Tanpa Menyakiti',
+    tags: ['Engineering Management', 'DORA Metrics', 'Developer Experience'],
+    date: '2026-04-22',
+    content: '/contents/notebooks/26/04/22_01.md',
+  },
+  {
     slug: 'webassembly-bahasa-apapun-jalan-di-browser',
     title: 'WebAssembly: Bahasa Apapun, Jalan di Browser',
     tags: ['WebAssembly', 'Frontend', 'Web Development'],
