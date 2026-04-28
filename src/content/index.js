@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'penyakit-ain-pada-anak-antara-keyakinan-dan-keseimbangan',
+    title: 'Penyakit Ain pada Anak: Antara Keyakinan, Kewaspadaan, dan Keseimbangan',
+    tags: ['Islam', 'Parenting', 'Kesehatan Anak'],
+    date: '2026-04-28',
+    content: '/contents/notebooks/26/04/28_01.md',
+  },
+  {
     slug: 'mengukur-produktivitas-tim-engineering-tanpa-menyakiti',
     title: 'Mengukur Produktivitas Tim Engineering Tanpa Menyakiti',
     tags: ['Engineering Management', 'DORA Metrics', 'Developer Experience'],
