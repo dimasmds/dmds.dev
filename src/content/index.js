@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'tadabbur-al-quran-membaca-dengan-hati-bukan-sadar-huruf',
+    title: 'Tadabbur Al-Quran: Membaca dengan Hati, Bukan Sekadar Sadar Huruf',
+    tags: ['Islami', 'Al-Quran', 'Tadabbur'],
+    date: '2026-05-01',
+    content: '/contents/notebooks/26/05/01_01.md',
+  },
+  {
     slug: 'penyakit-ain-pada-anak-antara-keyakinan-dan-keseimbangan',
     title: 'Penyakit Ain pada Anak: Antara Keyakinan, Kewaspadaan, dan Keseimbangan',
     tags: ['Islam', 'Parenting', 'Kesehatan Anak'],
