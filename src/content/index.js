@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'bun-runtime-javascript-yang-menantang-dominasi-nodejs',
+    title: 'Bun: Runtime JavaScript yang Menantang Dominasi Node.js',
+    tags: ['JavaScript', 'Bun', 'Node.js', 'Web Development'],
+    date: '2026-05-04',
+    content: '/contents/notebooks/26/05/04_01.md',
+  },
+  {
     slug: 'tadabbur-al-quran-membaca-dengan-hati-bukan-sadar-huruf',
     title: 'Tadabbur Al-Quran: Membaca dengan Hati, Bukan Sekadar Sadar Huruf',
     tags: ['Islami', 'Al-Quran', 'Tadabbur'],
