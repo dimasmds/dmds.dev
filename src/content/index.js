@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'good-enough-parenting-mengapa-menjadi-cukup-justru-lebih-baik',
+    title: 'Good Enough Parenting: Mengapa Menjadi Orang Tua yang "Cukup" Justru Lebih Baik',
+    tags: ['Parenting', 'Psikologi Anak', 'Fatherhood'],
+    date: '2026-05-10',
+    content: '/contents/notebooks/26/05/10_01.md',
+  },
+  {
     slug: 'bun-runtime-javascript-yang-menantang-dominasi-nodejs',
     title: 'Bun: Runtime JavaScript yang Menantang Dominasi Node.js',
     tags: ['JavaScript', 'Bun', 'Node.js', 'Web Development'],
