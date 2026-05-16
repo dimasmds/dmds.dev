@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'husnudzan-di-ruang-kerja-dari-dalil-ke-data',
+    title: 'Husnudzan di Ruang Kerja: Dari Dalil ke Data',
+    tags: ['Islami', 'Engineering Leadership', 'Psychological Safety'],
+    date: '2026-05-15',
+    content: '/contents/notebooks/26/05/15_01.md',
+  },
+  {
     slug: 'good-enough-parenting-mengapa-menjadi-cukup-justru-lebih-baik',
     title: 'Good Enough Parenting: Mengapa Menjadi Orang Tua yang "Cukup" Justru Lebih Baik',
     tags: ['Parenting', 'Psikologi Anak', 'Fatherhood'],
