@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'layar-vs-dunia-nyata-mengapa-screen-time-anak-bukan-sekadar-soal-durasi',
+    title: 'Layar vs. Dunia Nyata: Mengapa Screen Time Anak Bukan Sekadar Soal Durasi',
+    tags: ['Parenting', 'Screen Time', 'Digital Parenting', 'Fatherhood'],
+    date: '2026-05-17',
+    content: '/contents/notebooks/26/05/17_01.md',
+  },
+  {
     slug: 'husnudzan-di-ruang-kerja-dari-dalil-ke-data',
     title: 'Husnudzan di Ruang Kerja: Dari Dalil ke Data',
     tags: ['Islami', 'Engineering Leadership', 'Psychological Safety'],
