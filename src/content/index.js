@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: '90-hari-pertama-engineer-baru-mengapa-onboarding-menentukan-masa-depan-tim',
+    title: '90 Hari Pertama Engineer Baru: Mengapa Onboarding Menentukan Masa Depan Tim',
+    tags: ['Engineering Leadership', 'Onboarding', 'Team Management', 'Developer Experience'],
+    date: '2026-05-20',
+    content: '/contents/notebooks/26/05/20_01.md',
+  },
+  {
     slug: 'layar-vs-dunia-nyata-mengapa-screen-time-anak-bukan-sekadar-soal-durasi',
     title: 'Layar vs. Dunia Nyata: Mengapa Screen Time Anak Bukan Sekadar Soal Durasi',
     tags: ['Parenting', 'Screen Time', 'Digital Parenting', 'Fatherhood'],
