@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'emotion-coaching-mengapa-cara-kita-merespons-emosi-anak-lebih-penting-dari-masalahnya',
+    title: 'Emotion Coaching: Mengapa Cara Kita Merespons Emosi Anak Lebih Penting dari Masalahnya',
+    tags: ['Parenting', 'Psikologi Anak', 'Emotion Coaching', 'Fatherhood'],
+    date: '2026-05-24',
+    content: '/contents/notebooks/26/05/24_01.md',
+  },
+  {
     slug: '90-hari-pertama-engineer-baru-mengapa-onboarding-menentukan-masa-depan-tim',
     title: '90 Hari Pertama Engineer Baru: Mengapa Onboarding Menentukan Masa Depan Tim',
     tags: ['Engineering Leadership', 'Onboarding', 'Team Management', 'Developer Experience'],
