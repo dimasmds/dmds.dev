@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'parental-burnout-ketika-kelelahan-bukan-sekadar-lelah',
+    title: 'Parental Burnout: Ketika Kelelahan Bukan Sekadar Lelah',
+    tags: ['Parenting', 'Psikologi', 'Burnout', 'Fatherhood'],
+    date: '2026-05-31',
+    content: '/contents/notebooks/26/05/31_01.md',
+  },
+  {
     slug: 'emotion-coaching-mengapa-cara-kita-merespons-emosi-anak-lebih-penting-dari-masalahnya',
     title: 'Emotion Coaching: Mengapa Cara Kita Merespons Emosi Anak Lebih Penting dari Masalahnya',
     tags: ['Parenting', 'Psikologi Anak', 'Emotion Coaching', 'Fatherhood'],
