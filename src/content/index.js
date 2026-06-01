@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'deno-2-8-dari-eksperimen-menjadi-pesaing-serius-nodejs',
+    title: 'Deno 2.8: Dari Eksperimen Menjadi Pesaing Serius Node.js',
+    tags: ['JavaScript', 'Deno', 'Node.js', 'Web Development'],
+    date: '2026-06-01',
+    content: '/contents/notebooks/26/06/01_01.md',
+  },
+  {
     slug: 'parental-burnout-ketika-kelelahan-bukan-sekadar-lelah',
     title: 'Parental Burnout: Ketika Kelelahan Bukan Sekadar Lelah',
     tags: ['Parenting', 'Psikologi', 'Burnout', 'Fatherhood'],
