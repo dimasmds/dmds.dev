@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'sabar-dan-sains-mengapa-islam-sudah-mengajarkan-resiliensi-jauh-sebelum-psikologi-menemukannya',
+    title: 'Sabar dan Sains: Mengapa Islam Sudah Mengajarkan Resiliensi Jauh Sebelum Psikologi Menemukannya',
+    tags: ['Islami', 'Psikologi', 'Resiliensi', 'Sabar'],
+    date: '2026-06-05',
+    content: '/contents/notebooks/26/06/05_01.md',
+  },
+  {
     slug: 'deno-2-8-dari-eksperimen-menjadi-pesaing-serius-nodejs',
     title: 'Deno 2.8: Dari Eksperimen Menjadi Pesaing Serius Node.js',
     tags: ['JavaScript', 'Deno', 'Node.js', 'Web Development'],
