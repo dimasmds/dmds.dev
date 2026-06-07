@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'bermain-bukan-buang-waktu-sains-di-balik-pentingnya-play-untuk-perkembangan-anak',
+    title: 'Bermain Bukan Buang Waktu: Sains di Balik Pentingnya Play untuk Perkembangan Anak',
+    tags: ['Parenting', 'Psikologi Anak', 'Play', 'Fatherhood'],
+    date: '2026-06-07',
+    content: '/contents/notebooks/26/06/07_01.md',
+  },
+  {
     slug: 'sabar-dan-sains-mengapa-islam-sudah-mengajarkan-resiliensi-jauh-sebelum-psikologi-menemukannya',
     title: 'Sabar dan Sains: Mengapa Islam Sudah Mengajarkan Resiliensi Jauh Sebelum Psikologi Menemukannya',
     tags: ['Islami', 'Psikologi', 'Resiliensi', 'Sabar'],
