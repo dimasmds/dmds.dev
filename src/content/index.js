@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'architecture-decision-records-mengapa-tim-anda-perlu-mendokumentasikan-why-bukan-hanya-what',
+    title: 'Architecture Decision Records: Mengapa Tim Anda Perlu Mendokumentasikan "Why", Bukan Hanya "What"',
+    tags: ['Engineering Leadership', 'Software Architecture', 'ADR', 'Team Management'],
+    date: '2026-06-10',
+    content: '/contents/notebooks/26/06/10_01.md',
+  },
+  {
     slug: 'bermain-bukan-buang-waktu-sains-di-balik-pentingnya-play-untuk-perkembangan-anak',
     title: 'Bermain Bukan Buang Waktu: Sains di Balik Pentingnya Play untuk Perkembangan Anak',
     tags: ['Parenting', 'Psikologi Anak', 'Play', 'Fatherhood'],
