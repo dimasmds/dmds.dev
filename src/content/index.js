@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'tawakkal-bukan-pasrah-ketika-ikhtiar-dan-penyerahan-diri-berjalan-bersama',
+    title: 'Tawakkal Bukan Pasrah: Ketika Ikhtiar dan Penyerahan Diri Berjalan Bersama',
+    tags: ['Islami', 'Tawakkal', 'Psikologi', 'Spiritual'],
+    date: '2026-06-12',
+    content: '/contents/notebooks/26/06/12_01.md',
+  },
+  {
     slug: 'architecture-decision-records-mengapa-tim-anda-perlu-mendokumentasikan-why-bukan-hanya-what',
     title: 'Architecture Decision Records: Mengapa Tim Anda Perlu Mendokumentasikan "Why", Bukan Hanya "What"',
     tags: ['Engineering Leadership', 'Software Architecture', 'ADR', 'Team Management'],
