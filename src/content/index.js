@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'tegas-bukan-keras-empat-gaya-pengasuhan-dari-penelitian-diana-baumrind',
+    title: 'Tegas Bukan Keras: Empat Gaya Pengasuhan dari Penelitian Diana Baumrind',
+    tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Parenting Styles'],
+    date: '2026-06-14',
+    content: '/contents/notebooks/26/06/14_01.md',
+  },
+  {
     slug: 'tawakkal-bukan-pasrah-ketika-ikhtiar-dan-penyerahan-diri-berjalan-bersama',
     title: 'Tawakkal Bukan Pasrah: Ketika Ikhtiar dan Penyerahan Diri Berjalan Bersama',
     tags: ['Islami', 'Tawakkal', 'Psikologi', 'Spiritual'],
