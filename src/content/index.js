@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'mcp-model-context-protocol-usb-c-untuk-ai-panduan-belajar-mandiri',
+    title: 'MCP (Model Context Protocol): USB-C untuk AI—Panduan Belajar Mandiri',
+    tags: ['AI', 'Model Context Protocol', 'Learning Design', 'Produktivitas'],
+    date: '2026-06-16',
+    content: '/contents/notebooks/26/06/16_01.md',
+  },
+  {
     slug: 'tegas-bukan-keras-empat-gaya-pengasuhan-dari-penelitian-diana-baumrind',
     title: 'Tegas Bukan Keras: Empat Gaya Pengasuhan dari Penelitian Diana Baumrind',
     tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Parenting Styles'],
