@@ -5,6 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { notebooks } from '../../../content';
 import AudioPlayer from '../../Pures/AudioPlayer';
+import MermaidDiagram from '../../Pures/MermaidDiagram';
 import SEO from '../../Pures/SEO';
 import RelatedArticles from '../../Pures/RelatedArticles';
 import TableOfContents, { slugify } from '../../Pures/TableOfContents';
@@ -186,7 +187,22 @@ function NotebookPage() {
       {headings.length >= 3 && <TableOfContents headings={headings} />}
 
       <div className="markdown-body" ref={markdownRef}>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '');
+              if (!inline && match && match[1] === 'mermaid') {
+                return <MermaidDiagram chart={String(children)} />;
+              }
+              return (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            },
+          }}
+        >
           {content}
         </ReactMarkdown>
       </div>
