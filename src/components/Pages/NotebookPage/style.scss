@@ -108,6 +108,40 @@
       padding-left: 16px;
       color: var(--on-background-grey);
     }
+
+    .mermaid-container {
+      display: flex;
+      justify-content: center;
+      margin: 32px 0;
+      padding: 24px;
+      background-color: #ffffff;
+      border: 2px solid var(--on-background-border);
+      border-radius: var(--border-radius);
+      box-shadow: 4px 4px 0 var(--shadow-color);
+      overflow-x: auto;
+
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .mermaid-error {
+      margin: 32px 0;
+      padding: 16px;
+      border: 2px solid #e53e3e;
+      border-radius: var(--border-radius);
+      background-color: #fff5f5;
+      color: #e53e3e;
+
+      pre {
+        margin-top: 8px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        background-color: #fff;
+        color: #333;
+      }
+    }
   }
 }
 
