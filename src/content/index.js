@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'memasang-claude-code-cli-di-macos-tutorial-lengkap',
+    title: 'Memasang Claude Code CLI di macOS: Tutorial Lengkap dari Nol',
+    tags: ['AI', 'Claude Code', 'Tutorial', 'macOS', 'Developer Tools'],
+    date: '2026-06-18',
+    content: '/contents/notebooks/26/06/18_01.md',
+  },
+  {
     slug: 'mcp-model-context-protocol-usb-c-untuk-ai-panduan-belajar-mandiri',
     title: 'MCP (Model Context Protocol): USB-C untuk AI—Panduan Belajar Mandiri',
     tags: ['AI', 'Model Context Protocol', 'Learning Design', 'Produktivitas'],
