@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'htmx-kembali-ke-html-ketika-kompleksitas-javascript-mencapai-batas',
+    title: 'htmx: Kembali ke HTML Ketika Kompleksitas JavaScript Mencapai Batas',
+    tags: ['htmx', 'Frontend', 'Web Development', 'Software Architecture', 'Hypermedia'],
+    date: '2026-06-22',
+    content: '/contents/notebooks/26/06/22_01.md',
+  },
+  {
     slug: 'memasang-claude-code-cli-di-macos-tutorial-lengkap',
     title: 'Memasang Claude Code CLI di macOS: Tutorial Lengkap dari Nol',
     tags: ['AI', 'Claude Code', 'Tutorial', 'macOS', 'Developer Tools'],
