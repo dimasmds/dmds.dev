@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'react-compiler-akhir-dari-manual-memoization-dan-awal-optimasi-otomatis',
+    title: 'React Compiler: Akhir dari Manual Memoization dan Awal Optimasi Otomatis',
+    tags: ['React', 'React Compiler', 'Frontend', 'Web Development', 'Performance'],
+    date: '2026-06-30',
+    content: '/contents/notebooks/26/06/30_01.md',
+  },
+  {
     slug: 'htmx-kembali-ke-html-ketika-kompleksitas-javascript-mencapai-batas',
     title: 'htmx: Kembali ke HTML Ketika Kompleksitas JavaScript Mencapai Batas',
     tags: ['htmx', 'Frontend', 'Web Development', 'Software Architecture', 'Hypermedia'],
