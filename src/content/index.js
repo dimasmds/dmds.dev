@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'team-topologies-mengapa-struktur-tim-menentukan-software-yang-dibangun',
+    title: 'Team Topologies: Mengapa Struktur Tim Menentukan Software yang Dibangun',
+    tags: ['Engineering Leadership', 'Team Topologies', 'Cognitive Load', 'Conway\'s Law', 'Organizational Design'],
+    date: '2026-07-01',
+    content: '/contents/notebooks/26/07/01_01.md',
+  },
+  {
     slug: 'react-compiler-akhir-dari-manual-memoization-dan-awal-optimasi-otomatis',
     title: 'React Compiler: Akhir dari Manual Memoization dan Awal Optimasi Otomatis',
     tags: ['React', 'React Compiler', 'Frontend', 'Web Development', 'Performance'],
