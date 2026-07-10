@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'barakah-dalam-waktu-ketika-kehadiran-mengalahkan-jumlah-jam',
+    title: 'Barakah dalam Waktu: Ketika Kehadiran Mengalahkan Jumlah Jam',
+    tags: ['Islami', 'Barakah', 'Produktivitas', 'Spiritual', 'Time Management'],
+    date: '2026-07-10',
+    content: '/contents/notebooks/26/07/10_01.md',
+  },
+  {
     slug: 'team-topologies-mengapa-struktur-tim-menentukan-software-yang-dibangun',
     title: 'Team Topologies: Mengapa Struktur Tim Menentukan Software yang Dibangun',
     tags: ['Engineering Leadership', 'Team Topologies', 'Cognitive Load', 'Conway\'s Law', 'Organizational Design'],
