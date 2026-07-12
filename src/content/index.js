@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'pujian-yang-menjadi-jebakan-growth-mindset-dan-cara-memuji-anak-yang-tepat',
+    title: 'Pujian yang Menjadi Jebakan: Growth Mindset dan Cara Memuji Anak yang Tepat',
+    tags: ['Parenting', 'Growth Mindset', 'Psikologi Anak', 'Fatherhood'],
+    date: '2026-07-12',
+    content: '/contents/notebooks/26/07/12_01.md',
+  },
+  {
     slug: 'barakah-dalam-waktu-ketika-kehadiran-mengalahkan-jumlah-jam',
     title: 'Barakah dalam Waktu: Ketika Kehadiran Mengalahkan Jumlah Jam',
     tags: ['Islami', 'Barakah', 'Produktivitas', 'Spiritual', 'Time Management'],
