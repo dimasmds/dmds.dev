@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'serve-and-return-sains-di-balik-interaksi-yang-membangun-otak-anak',
+    title: 'Serve and Return: Sains di Balik Interaksi yang Membangun Otak Anak',
+    tags: ['Parenting', 'Neuroscience', 'Brain Development', 'Fatherhood'],
+    date: '2026-07-26',
+    content: '/contents/notebooks/26/07/26_01.md',
+  },
+  {
     slug: 'pujian-yang-menjadi-jebakan-growth-mindset-dan-cara-memuji-anak-yang-tepat',
     title: 'Pujian yang Menjadi Jebakan: Growth Mindset dan Cara Memuji Anak yang Tepat',
     tags: ['Parenting', 'Growth Mindset', 'Psikologi Anak', 'Fatherhood'],
