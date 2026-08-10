@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'signals-primitive-reactivity-yang-diam-diam-menyatukan-frontend-javascript',
+    title: 'Signals: Primitive Reactivity yang Diam-diam Menyatukan Frontend JavaScript',
+    tags: ['JavaScript', 'Signals', 'Reactivity', 'Frontend', 'Web Development'],
+    date: '2026-08-10',
+    content: '/contents/notebooks/26/08/10_01.md',
+  },
+  {
     slug: 'serve-and-return-sains-di-balik-interaksi-yang-membangun-otak-anak',
     title: 'Serve and Return: Sains di Balik Interaksi yang Membangun Otak Anak',
     tags: ['Parenting', 'Neuroscience', 'Brain Development', 'Fatherhood'],
