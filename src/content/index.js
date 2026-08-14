@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'qanaah-dan-hedonic-treadmill-mengapa-rasa-sudah-cukup-selalu-berpindah',
+    title: 'Qana\'ah dan Hedonic Treadmill: Mengapa Rasa "Sudah Cukup" Selalu Berpindah',
+    tags: ['Islami', 'Qanaah', 'Psikologi'],
+    date: '2026-08-14',
+    content: '/contents/notebooks/26/08/14_01.md',
+  },
+  {
     slug: 'signals-primitive-reactivity-yang-diam-diam-menyatukan-frontend-javascript',
     title: 'Signals: Primitive Reactivity yang Diam-diam Menyatukan Frontend JavaScript',
     tags: ['JavaScript', 'Signals', 'Reactivity', 'Frontend', 'Web Development'],
