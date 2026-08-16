@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'childhood-amnesia-ilmu-di-balik-kenangan-yang-hilang',
+    title: 'Childhood Amnesia: Ilmu di Balik Kenangan Masa Kecil yang Hilang',
+    tags: ['Parenting', 'Psikologi Perkembangan', 'Neurosains'],
+    date: '2026-08-16',
+    content: '/contents/notebooks/26/08/16_01.md',
+  },
+  {
     slug: 'qanaah-dan-hedonic-treadmill-mengapa-rasa-sudah-cukup-selalu-berpindah',
     title: 'Qana\'ah dan Hedonic Treadmill: Mengapa Rasa "Sudah Cukup" Selalu Berpindah',
     tags: ['Islami', 'Qanaah', 'Psikologi'],
