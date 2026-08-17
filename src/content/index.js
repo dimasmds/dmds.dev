@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'kecepatan-sebagai-fitur-ketika-tooling-javascript-ditulis-ulang-dalam-rust-dan-go',
+    title: 'Kecepatan sebagai Fitur: Ketika Tooling JavaScript Ditulis Ulang dalam Rust dan Go',
+    tags: ['Tech', 'JavaScript', 'Rust', 'Vite', 'Web Development'],
+    date: '2026-08-17',
+    content: '/contents/notebooks/26/08/17_01.md',
+  },
+  {
     slug: 'childhood-amnesia-ilmu-di-balik-kenangan-yang-hilang',
     title: 'Childhood Amnesia: Ilmu di Balik Kenangan Masa Kecil yang Hilang',
     tags: ['Parenting', 'Psikologi Perkembangan', 'Neurosains'],
