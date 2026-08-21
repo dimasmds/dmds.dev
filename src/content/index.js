@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'menghitung-diri-sebelum-dihitung-muhasabah-dan-sains-refleksi',
+    title: 'Menghitung Diri Sebelum Dihitung: Muhasabah, Retrospektif, dan Sains Refleksi',
+    tags: ['Islami', 'Muhasabah', 'Psikologi', 'Spiritual'],
+    date: '2026-08-21',
+    content: '/contents/notebooks/26/08/21_01.md',
+  },
+  {
     slug: 'kecepatan-sebagai-fitur-ketika-tooling-javascript-ditulis-ulang-dalam-rust-dan-go',
     title: 'Kecepatan sebagai Fitur: Ketika Tooling JavaScript Ditulis Ulang dalam Rust dan Go',
     tags: ['Tech', 'JavaScript', 'Rust', 'Vite', 'Web Development'],
