@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'anak-dua-bahasa-sains-dibalik-mitos-bilingualisme',
+    title: 'Anak Dua Bahasa: Sains di Balik Mitos Bilingualisme',
+    tags: ['Parenting', 'Bilingual', 'Perkembangan Bahasa', 'Fatherhood'],
+    date: '2026-08-23',
+    content: '/contents/notebooks/26/08/23_01.md',
+  },
+  {
     slug: 'menghitung-diri-sebelum-dihitung-muhasabah-dan-sains-refleksi',
     title: 'Menghitung Diri Sebelum Dihitung: Muhasabah, Retrospektif, dan Sains Refleksi',
     tags: ['Islami', 'Muhasabah', 'Psikologi', 'Spiritual'],
