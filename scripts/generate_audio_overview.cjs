@@ -69,16 +69,43 @@ ATURAN:
 - Sifatnya membacakan ulang konten artikel dengan gaya storytelling, bukan membaca mentah
 - Baca dan pahami SELURUH isi artikel, kemudian buat narasi yang mencakup semua poin pentingnya
 - Boleh menambahkan transisi antar bagian agar mengalir natural
-- Jangan tambahkan efek suara atau stage direction — cuma teks yang akan dibacakan
 - Pertahankan substansi dan depth artikel aslinya
 - Langsung mulai dari narasi, tanpa "Selamat datang" atau pembukaan basa-basi
 - Akhiri dengan penutup singkat yang natural
+
+ATURAN AUDIO TAGS (WAJIB):
+Sisipkan audio tags [dalam kurung siku] di seluruh narasi untuk mengontrol intonasi, penekanan, dan jeda. Ini akan dibaca oleh AI text-to-speech.
+
+Tags yang WAJIB digunakan:
+- [short pause] — di antara paragraf, sebelum transisi ide, atau setelah kalimat penting
+- [long pause] — saat pergantian topik/bagian besar
+- [seriously] — saat menyampaikan poin kritis atau penting
+- [curious] — saat mengajukan pertanyaan retoris atau menyarankan sesuatu
+- [excitedly] — saat menyebutkan fakta menarik atau discovery
+- [calmly] — saat menjelaskan konsep yang tenang/damai
+- [whispers] — saat memberikan insight personal atau rahasia
+- [emphasis on ...] — sebelum kata/frasa yang perlu ditekankan, misal [emphasis on] teknologi ini
+- [sighs] — saat menyampaikan kekecewaan atau frustrasi
+- [laughs softly] — saat ada humor ringan
+- [with emphasis] — untuk kalimat kunci yang perlu penekanan ekstra
+- [thoughtfully] — saat merefleksikan atau menyimpulkan
+
+PANDUAN PENEMPATAN:
+- Setiap paragraf baru diawali atau diakhiri [short pause]
+- Transisi antar bagian artikel: [long pause]
+- Istilah teknis atau kata kunci penting: beri [emphasis on] sebelumnya
+- Jangan berlebihan — cukup 2-4 tags per paragraf agar terdengar natural
+- Tags dalam Bahasa Inggris (best practice Gemini TTS)
+- Narasi tetap dalam Bahasa Indonesia, hanya tags yang Bahasa Inggris
+
+CONTOH:
+[calmly] Di era digital yang semakin maju, [emphasis on] kecerdasan buatan bukan lagi sekadar mimpi. [short pause] Teknologi ini telah merambah berbagai aspek kehidupan kita. [seriously] Dan yang perlu kita sadari, perubahan ini terjadi [with emphasis] jauh lebih cepat dari yang kita kira.
 
 ARTIKEL:
 ${plainText}`;
 
   const transcriptResp = await ai.models.generateContent({
-    model: 'gemini-2.0-flash',
+    model: 'gemini-3.6-flash',
     contents: prompt,
   });
   const transcript = transcriptResp.text;
@@ -99,7 +126,7 @@ ${plainText}`;
     },
     contents: [{
       role: 'user',
-      parts: [{ text: `Read the following text aloud in a calm, warm, adult male voice. Speak naturally as an audiobook narrator in Bahasa Indonesia, with appropriate pauses between paragraphs:\n\n${transcript}` }],
+      parts: [{ text: `Read the following text aloud in a calm, warm, adult male voice. Speak naturally as an audiobook narrator in Bahasa Indonesia. IMPORTANT: Interpret all text in [square brackets] as audio direction tags — they control pace, tone, emphasis, and emotion. For example [short pause] means take a brief pause, [seriously] means shift to a serious tone, [whispers] means lower your voice, [excitedly] means speak with energy. Follow all bracketed tags precisely.\n\n${transcript}` }],
     }],
   });
 
