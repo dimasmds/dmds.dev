@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'efek-mozart-yang-runtuh-lullaby-yang-bertahan',
+    title: 'Efek Mozart yang Runtuh, Lullaby yang Bertahan: Sains Musik untuk Anak',
+    tags: ['Parenting', 'Musik', 'Psikologi Perkembangan', 'Sains'],
+    date: '2026-08-30',
+    content: '/contents/notebooks/26/08/30_01.md',
+  },
+  {
     slug: 'anak-dua-bahasa-sains-dibalik-mitos-bilingualisme',
     title: 'Anak Dua Bahasa: Sains di Balik Mitos Bilingualisme',
     tags: ['Parenting', 'Bilingual', 'Perkembangan Bahasa', 'Fatherhood'],
