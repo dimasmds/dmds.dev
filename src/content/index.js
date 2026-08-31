@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'ketika-node-js-belajar-membaca-typescript-type-stripping-dan-akhir-zaman-ts-node',
+    title: 'Ketika Node.js Belajar Membaca TypeScript: Type Stripping dan Akhir Zaman ts-node',
+    tags: ['Tech', 'Node.js', 'TypeScript', 'JavaScript', 'Web Development'],
+    date: '2026-08-31',
+    content: '/contents/notebooks/26/08/31_01.md',
+  },
+  {
     slug: 'efek-mozart-yang-runtuh-lullaby-yang-bertahan',
     title: 'Efek Mozart yang Runtuh, Lullaby yang Bertahan: Sains Musik untuk Anak',
     tags: ['Parenting', 'Musik', 'Psikologi Perkembangan', 'Sains'],
