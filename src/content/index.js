@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'menyambung-yang-terputus-silaturahmi-dan-epidemi-kesepian',
+    title: 'Menyambung yang Terputus: Silaturahmi di Tengah Epidemi Kesepian',
+    tags: ['Islami', 'Silaturahmi', 'Kesehatan Mental', 'Psikologi'],
+    date: '2026-09-11',
+    content: '/contents/notebooks/26/09/11_01.md',
+  },
+  {
     slug: 'ketika-node-js-belajar-membaca-typescript-type-stripping-dan-akhir-zaman-ts-node',
     title: 'Ketika Node.js Belajar Membaca TypeScript: Type Stripping dan Akhir Zaman ts-node',
     tags: ['Tech', 'Node.js', 'TypeScript', 'JavaScript', 'Web Development'],
