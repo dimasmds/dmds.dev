@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'bohong-pertama-anak-tanda-perkembangan-yang-sering-disalahpahami',
+    title: 'Bohong Pertama Anak: Tanda Perkembangan yang Sering Disalahpahami',
+    tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Perkembangan Kognitif'],
+    date: '2026-09-13',
+    content: '/contents/notebooks/26/09/13_01.md',
+  },
+  {
     slug: 'menyambung-yang-terputus-silaturahmi-dan-epidemi-kesepian',
     title: 'Menyambung yang Terputus: Silaturahmi di Tengah Epidemi Kesepian',
     tags: ['Islami', 'Silaturahmi', 'Kesehatan Mental', 'Psikologi'],
