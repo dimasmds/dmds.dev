@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'marshmallow-test-yang-goyah-kesabaran-anak-tumbuh-dari-kepercayaan-bukan-tekad',
+    title: 'Marshmallow Test yang Goyah: Kesabaran Anak Tumbuh dari Kepercayaan, Bukan Sekadar Tekad',
+    tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Sains'],
+    date: '2026-09-27',
+    content: '/contents/notebooks/26/09/27_01.md',
+  },
+  {
     slug: 'bohong-pertama-anak-tanda-perkembangan-yang-sering-disalahpahami',
     title: 'Bohong Pertama Anak: Tanda Perkembangan yang Sering Disalahpahami',
     tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Perkembangan Kognitif'],
