@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'ai-amplifier-bukan-penyelamat-memimpin-tim-engineering-di-era-ai',
+    title: 'Amplifier, Bukan Penyelamat: Memimpin Tim Engineering di Era AI Menulis Kode',
+    tags: ['Engineering Leadership', 'AI', 'Engineering Management', 'Developer Productivity', 'Team Management'],
+    date: '2026-09-30',
+    content: '/contents/notebooks/26/09/30_01.md',
+  },
+  {
     slug: 'marshmallow-test-yang-goyah-kesabaran-anak-tumbuh-dari-kepercayaan-bukan-tekad',
     title: 'Marshmallow Test yang Goyah: Kesabaran Anak Tumbuh dari Kepercayaan, Bukan Sekadar Tekad',
     tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Sains'],
