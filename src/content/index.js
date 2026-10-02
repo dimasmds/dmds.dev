@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'sedekah-tidak-mengurangi-harta-sains-dibalik-kebahagiaan-berbagi',
+    title: 'Sedekah Tidak Mengurangi Harta — dan Sains Psikologi Ternyata Setuju',
+    tags: ['Islami', 'Sedekah', 'Psikologi'],
+    date: '2026-10-02',
+    content: '/contents/notebooks/26/10/02_01.md',
+  },
+  {
     slug: 'ai-amplifier-bukan-penyelamat-memimpin-tim-engineering-di-era-ai',
     title: 'Amplifier, Bukan Penyelamat: Memimpin Tim Engineering di Era AI Menulis Kode',
     tags: ['Engineering Leadership', 'AI', 'Engineering Management', 'Developer Productivity', 'Team Management'],
