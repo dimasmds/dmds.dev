@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'sejuta-kata-sebelum-sekolah-sains-membacakan-buku-untuk-anak',
+    title: 'Sejuta Kata Sebelum Sekolah: Sains di Balik Membacakan Buku untuk Anak',
+    tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Literasi'],
+    date: '2026-10-04',
+    content: '/contents/notebooks/26/10/04_01.md',
+  },
+  {
     slug: 'sedekah-tidak-mengurangi-harta-sains-dibalik-kebahagiaan-berbagi',
     title: 'Sedekah Tidak Mengurangi Harta — dan Sains Psikologi Ternyata Setuju',
     tags: ['Islami', 'Sedekah', 'Psikologi'],
