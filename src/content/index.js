@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'ikhlas-riya-dan-sains-motivasi-intrinsik',
+    title: 'Ikhlas dan Riya: Ketika Sorotan Menulis Ulang Alasan Kita Berbuat',
+    tags: ['Islami', 'Ikhlas', 'Psikologi', 'Motivasi'],
+    date: '2026-10-09',
+    content: '/contents/notebooks/26/10/09_01.md',
+  },
+  {
     slug: 'sejuta-kata-sebelum-sekolah-sains-membacakan-buku-untuk-anak',
     title: 'Sejuta Kata Sebelum Sekolah: Sains di Balik Membacakan Buku untuk Anak',
     tags: ['Parenting', 'Psikologi Anak', 'Fatherhood', 'Literasi'],
