@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'ruang-kosong-yang-subur-mengapa-anak-perlu-bosan',
+    title: 'Ruang Kosong yang Subur: Mengapa Anak Perlu Bosan',
+    tags: ['Parenting', 'Psikologi Anak', 'Kreativitas', 'Fatherhood'],
+    date: '2026-10-11',
+    content: '/contents/notebooks/26/10/11_01.md',
+  },
+  {
     slug: 'ikhlas-riya-dan-sains-motivasi-intrinsik',
     title: 'Ikhlas dan Riya: Ketika Sorotan Menulis Ulang Alasan Kita Berbuat',
     tags: ['Islami', 'Ikhlas', 'Psikologi', 'Motivasi'],
