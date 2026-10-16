@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'ghibah-dan-sains-gosip',
+    title: 'Ghibah dan Sains Gosip: 52 Menit Sehari yang Tidak Kita Sadari',
+    tags: ['Islami', 'Psikologi', 'Akhlaq', 'Komunikasi'],
+    date: '2026-10-16',
+    content: '/contents/notebooks/26/10/16_01.md',
+  },
+  {
     slug: 'ruang-kosong-yang-subur-mengapa-anak-perlu-bosan',
     title: 'Ruang Kosong yang Subur: Mengapa Anak Perlu Bosan',
     tags: ['Parenting', 'Psikologi Anak', 'Kreativitas', 'Fatherhood'],
