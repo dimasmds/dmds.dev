@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'prinsip-peter-tangga-karier-yang-bercabang',
+    title: 'Prinsip Peter dan Tangga Karier yang Bercabang: Mengapa Engineer Terbaik Tidak Harus Jadi Manager',
+    tags: ['Engineering Leadership', 'Prinsip Peter', 'Career Ladder', 'Engineering Management', 'Staff Engineer'],
+    date: '2026-10-21',
+    content: '/contents/notebooks/26/10/21_01.md',
+  },
+  {
     slug: 'ghibah-dan-sains-gosip',
     title: 'Ghibah dan Sains Gosip: 52 Menit Sehari yang Tidak Kita Sadari',
     tags: ['Islami', 'Psikologi', 'Akhlaq', 'Komunikasi'],
