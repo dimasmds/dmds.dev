@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'proyek-konstruksi-tengah-malam-sains-tidur-anak',
+    title: 'Proyek Konstruksi Tengah Malam: Apa yang Sebenarnya Dibangun Otak Saat Anak Tidur',
+    tags: ['Parenting', 'Tidur', 'Perkembangan Anak', 'Neurosains'],
+    date: '2026-10-25',
+    content: '/contents/notebooks/26/10/25_01.md',
+  },
+  {
     slug: 'prinsip-peter-tangga-karier-yang-bercabang',
     title: 'Prinsip Peter dan Tangga Karier yang Bercabang: Mengapa Engineer Terbaik Tidak Harus Jadi Manager',
     tags: ['Engineering Leadership', 'Prinsip Peter', 'Career Ladder', 'Engineering Management', 'Staff Engineer'],
