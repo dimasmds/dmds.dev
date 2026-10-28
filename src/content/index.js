@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'paradoks-tim-terbaik-psychological-safety-dan-blameless-postmortem',
+    title: 'Paradoks Tim Terbaik: Mengapa Tim yang Sehat Justru Paling Banyak Melaporkan Kesalahan',
+    tags: ['Engineering Leadership', 'Psychological Safety', 'Blameless Postmortem', 'Incident Management'],
+    date: '2026-10-28',
+    content: '/contents/notebooks/26/10/28_01.md',
+  },
+  {
     slug: 'proyek-konstruksi-tengah-malam-sains-tidur-anak',
     title: 'Proyek Konstruksi Tengah Malam: Apa yang Sebenarnya Dibangun Otak Saat Anak Tidur',
     tags: ['Parenting', 'Tidur', 'Perkembangan Anak', 'Neurosains'],
