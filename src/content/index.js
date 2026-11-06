@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'puasa-bukan-diet-autophagi-dan-sains-lapar-terjadwal',
+    title: 'Puasa Bukan Diet: Autophagi, Jendela Waktu, dan Sains di Balik Lapar yang Terjadwal',
+    tags: ['Islami', 'Puasa', 'Kesehatan', 'Sains', 'Autophagi'],
+    date: '2026-11-06',
+    content: '/contents/notebooks/26/11/06_01.md',
+  },
+  {
     slug: 'paradoks-tim-terbaik-psychological-safety-dan-blameless-postmortem',
     title: 'Paradoks Tim Terbaik: Mengapa Tim yang Sehat Justru Paling Banyak Melaporkan Kesalahan',
     tags: ['Engineering Leadership', 'Psychological Safety', 'Blameless Postmortem', 'Incident Management'],
