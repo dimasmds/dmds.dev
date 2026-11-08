@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'dua-jam-di-bawah-langit-epidemi-miopi-dan-sains-cahaya-untuk-mata-anak',
+    title: 'Dua Jam di Bawah Langit: Epidemi Miopi dan Sains Cahaya untuk Mata Anak',
+    tags: ['Parenting', 'Kesehatan Anak', 'Sains', 'Miopi'],
+    date: '2026-11-08',
+    content: '/contents/notebooks/26/11/08_01.md',
+  },
+  {
     slug: 'puasa-bukan-diet-autophagi-dan-sains-lapar-terjadwal',
     title: 'Puasa Bukan Diet: Autophagi, Jendela Waktu, dan Sains di Balik Lapar yang Terjadwal',
     tags: ['Islami', 'Puasa', 'Kesehatan', 'Sains', 'Autophagi'],
