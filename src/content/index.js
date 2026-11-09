@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'local-first-software-aplikasi-cepat-yang-tidak-takut-koneksi-putus',
+    title: 'Local-First Software: Aplikasi Cepat yang Tidak Takut Koneksi Putus',
+    tags: ['Software Architecture', 'Web Development', 'Local-First', 'CRDT'],
+    date: '2026-11-09',
+    content: '/contents/notebooks/26/11/09_01.md',
+  },
+  {
     slug: 'dua-jam-di-bawah-langit-epidemi-miopi-dan-sains-cahaya-untuk-mata-anak',
     title: 'Dua Jam di Bawah Langit: Epidemi Miopi dan Sains Cahaya untuk Mata Anak',
     tags: ['Parenting', 'Kesehatan Anak', 'Sains', 'Miopi'],
