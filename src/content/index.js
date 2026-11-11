@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'satu-rapat-sore-yang-hilang-jadwal-maker-vs-jadwal-manajer',
+    title: 'Satu Rapat, Sore yang Hilang: Jadwal Maker vs Jadwal Manajer',
+    tags: ['Engineering Leadership', 'Manajemen Waktu', 'Produktivitas'],
+    date: '2026-11-11',
+    content: '/contents/notebooks/26/11/11_01.md',
+  },
+  {
     slug: 'local-first-software-aplikasi-cepat-yang-tidak-takut-koneksi-putus',
     title: 'Local-First Software: Aplikasi Cepat yang Tidak Takut Koneksi Putus',
     tags: ['Software Architecture', 'Web Development', 'Local-First', 'CRDT'],
