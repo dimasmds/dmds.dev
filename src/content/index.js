@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'anak-yang-boleh-jatuh-sains-di-balik-permainan-berisiko',
+    title: 'Anak yang Boleh Jatuh: Sains di Balik Permainan Berisiko',
+    tags: ['Parenting', 'Perkembangan Anak', 'Risky Play', 'Psikologi Anak'],
+    date: '2026-11-15',
+    content: '/contents/notebooks/26/11/15_01.md',
+  },
+  {
     slug: 'satu-rapat-sore-yang-hilang-jadwal-maker-vs-jadwal-manajer',
     title: 'Satu Rapat, Sore yang Hilang: Jadwal Maker vs Jadwal Manajer',
     tags: ['Engineering Leadership', 'Manajemen Waktu', 'Produktivitas'],
