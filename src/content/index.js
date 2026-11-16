@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'webgpu-ai-on-device-di-dalam-tab',
+    title: 'AI di Dalam Tab: WebGPU dan Gelombang Inference On-Device di Browser',
+    tags: ['Tech', 'WebGPU', 'AI', 'Web Development', 'On-Device AI'],
+    date: '2026-11-16',
+    content: '/contents/notebooks/26/11/16_01.md',
+  },
+  {
     slug: 'anak-yang-boleh-jatuh-sains-di-balik-permainan-berisiko',
     title: 'Anak yang Boleh Jatuh: Sains di Balik Permainan Berisiko',
     tags: ['Parenting', 'Perkembangan Anak', 'Risky Play', 'Psikologi Anak'],
