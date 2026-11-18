@@ -397,6 +397,13 @@ export const techTalks = [
 
 export const notebooks = [
   {
+    slug: 'percaya-diri-bukan-akurat-sains-wawancara-terstruktur',
+    title: 'Percaya Diri Bukan Berarti Akurat: Sains di Balik Wawancara Kerja Terstruktur',
+    tags: ['Engineering Leadership', 'Hiring', 'Structured Interview', 'Recruitment', 'Engineering Management'],
+    date: '2026-11-18',
+    content: '/contents/notebooks/26/11/18_01.md',
+  },
+  {
     slug: 'webgpu-ai-on-device-di-dalam-tab',
     title: 'AI di Dalam Tab: WebGPU dan Gelombang Inference On-Device di Browser',
     tags: ['Tech', 'WebGPU', 'AI', 'Web Development', 'On-Device AI'],
